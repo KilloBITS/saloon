@@ -4,7 +4,10 @@ class AboutBlock extends React.Component {
   render() {
     return <div className="datablock aboutBlock tm_pb_builder">
             <div className="content1024">
-              <div className="blockBigTitle" style={{color: 'black'}}>О САЛОНЕ</div>
+              <div className="blockBigTitle" style={{color: 'black'}}>
+              <h2>about</h2>
+              О САЛОНЕ
+              </div>
             </div>
             <div className="content1024" id="#tm_builder_outer_content">
               <div className="aboutSection">

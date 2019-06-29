@@ -13,12 +13,27 @@ import Header from './components/header.js';
 import About from './components/about.js';
 import StatisticBlock from './components/includes/statistic.js';
 import Services from './components/services.js';
+import StaffBlock from './components/staff.js';
+import GalleryBlock from './components/gallery.js';
+import ReviewsBlock from './components/reviews.js';
 
 
 library.add(fab, faCheckSquare, faCoffee, fas);
 
 const background = require('./data/images/Depositphotos_2.png');
 const logotype = require('./data/images/logotype.png');
+
+
+const handleScroll = () => {
+  const scrollBlock = document.getElementById('scrollBlock');
+  let scrolltop = scrollBlock.getElementsByTagName('div')[0].scrollTop;
+  if(scrolltop >= 800){
+    document.getElementById('topMenu').className = 'topMenu scrollMenu'
+  }else{
+    document.getElementById('topMenu').className = 'topMenu'
+  }
+  console.log(scrolltop)
+};
 
 class BodyContent extends React.Component {
   render(){
@@ -29,12 +44,15 @@ class BodyContent extends React.Component {
       <About/>
       <StatisticBlock/>
       <Services/>
+      <StaffBlock/>
+      <GalleryBlock/>
+      <ReviewsBlock/>
     </div>
   }
 }
 
 ReactDOM.render(
-  <Scrollbars style={{ height: "calc(100%)" }} renderThumbVertical={props => <div className="thumb-vertical"/>} id="scrollBlock" >
+  <Scrollbars onScroll={handleScroll} style={{ height: "calc(100%)" }} renderThumbVertical={props => <div className="thumb-vertical"/>} id="scrollBlock" >
     <BodyContent/>
   </Scrollbars>,
   document.getElementById('root')

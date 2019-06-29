@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class TopMenu extends React.Component {
   render() {
-    return <div className="topMenu">
+    return <div className="topMenu" id="topMenu">
       <div className="menuLeft">
         <div className="socials_mini_icon"><a target="_blank" href={"#"}><FontAwesomeIcon icon={['fab', 'vk']} /></a></div>
         <div className="socials_mini_icon"><a target="_blank" href={"#"}><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div>

@@ -8,7 +8,11 @@ class StatisticBlock extends React.Component {
         <div className="statistic_background">
           <img src={bg}/>
         </div>
-        <div className="statistic_block"></div>
+        <div className="statistic_block">
+          <div className="statisticDate"></div>
+          <div className="statisticDate"></div>
+          <div className="statisticDate"></div>
+        </div>
       </div>
     </div>
   }
