@@ -1,17 +1,22 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class StaffBlock extends React.Component {
   render() {
     return <div className="datablock staffBlock">
       <div className="content1024">
+        <Fade top>
         <div className="blockBigTitle" style={{color: 'black'}}>
           <h2>staff</h2>
           Персонал
         </div>
+        </Fade>
       </div>
       <div className="content1024">
         <div className="staffTable">
+          <Fade left>
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person3.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -24,6 +29,8 @@ class StaffBlock extends React.Component {
               </div>
             </div>
           </div>
+          </Fade>
+          <Fade left>
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person1.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -35,6 +42,8 @@ class StaffBlock extends React.Component {
               </div>
             </div>
           </div>
+          </Fade>
+          <Fade bottom>
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person2.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -46,6 +55,8 @@ class StaffBlock extends React.Component {
               </div>
             </div>
           </div>
+          </Fade>
+          <Fade right>
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person1.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -58,6 +69,8 @@ class StaffBlock extends React.Component {
               </div>
             </div>
           </div>
+          </Fade>
+          <Fade right>
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person3.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -68,6 +81,7 @@ class StaffBlock extends React.Component {
               </div>
             </div>
           </div>
+          </Fade>
         </div>
       </div>
       <div className="content1024">
@@ -75,9 +89,11 @@ class StaffBlock extends React.Component {
           <div className="fontAwesomHref"><FontAwesomeIcon icon={['fas', 'quote-right']} /></div>
           <div className=""></div>
           <div className="detailsStaffText">
+          <Zoom cascade>
             В профессии более 15 лет. Обучение в школах Vidal Sasson London, Dessange, Houte Coffure Francaise.
             <br/>
             «Мода выходит из моды. Стиль - никогда...»
+          </Zoom>
           </div>
         </div>
       </div>

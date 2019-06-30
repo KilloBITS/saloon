@@ -6,12 +6,14 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckSquare, faCoffee , fas} from '@fortawesome/free-solid-svg-icons';
 
 import './styles/index.css'
+import './styles/index.min.css'
 
+import Preloader from './components/preloader.js';
 import TopMenu from './components/includes/top-menu.js';
 import NavBar from './components/includes/navbar.js';
 import Header from './components/header.js';
 import About from './components/about.js';
-import StatisticBlock from './components/includes/statistic.js';
+import StatisticBlock from './components/statistic.js';
 import Services from './components/services.js';
 import StaffBlock from './components/staff.js';
 import GalleryBlock from './components/gallery.js';
@@ -39,8 +41,17 @@ const handleScroll = () => {
 };
 
 class BodyContent extends React.Component {
+  componentDidMount () { //ставим фокус в input
+    setTimeout(() => {
+      document.getElementById('Preloader').className = 'Preloader fadeout';
+      setTimeout(() => {
+        document.getElementById('Preloader').style.display = 'none'
+      }, 300);
+    },2500);
+  }
   render(){
     return <div className="contentData">
+      <Preloader/>
       <TopMenu/>
       <NavBar/>
       <Header background={background} logotype={logotype}/>

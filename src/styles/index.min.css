@@ -1,0 +1,238 @@
+@media screen and (max-width: 800px) {
+  .mobileMenuBtn{
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 21;
+  }
+
+  .mobBtnLineDef{
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 10px;
+  }
+
+  .headerBackground::after{
+    background-position: 100% calc(100% + 0px);
+  }
+  .topMenu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background-color: white;
+    z-index: -1;
+    opacity: 0;
+  }
+  .topMenu.openMenu{
+    opacity: 1;
+  }
+  .menuRight {
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+    top: 10px;
+    transform: none;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+  }
+  .verticalLine {
+    background-color: black;
+  }
+  .menuButton {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+  }
+  .searchBlock {
+    display: none;
+  }
+  .headerInfo {
+    max-width: none;
+    width: calc(100% - 100px);
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .headerInfoTitle{
+    font-size: 36px;
+  }
+  .arrowsPrewAnfNext{
+    overflow: hidden;
+  }
+  .rowbox {
+    max-width: 100%;
+  }
+  .rowcolumn {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    float: none;
+    background-size: cover;
+    background-position: center;
+    max-width: calc(100%);
+    font-family: DefaultText;
+    margin: auto;
+    flex: auto;
+  }
+  .aboutSection{
+    background-image: none;
+    padding-bottom: 30px;
+  }
+
+  .rowcolumn p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .tm_pb_text_4 p{
+    font-size: 16px;
+  }
+  .rowcolumn .tm_pb_module img{
+    max-width: 100%;
+  }
+  .contentData, .datablock {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .statistic_background{
+    display: none;
+  }
+  .headerBackground {
+    overflow-y: hidden;
+  }
+  .statistic_block {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  .statisticBlock{
+    background-color: white;
+    background-image: none;
+    overflow-y: hidden;
+  }
+  .statisticText {
+    font-family: DefaultText;
+    text-align: center;
+    height: auto;
+    position: relative;
+    padding-bottom: 60px;
+  }
+  .formLineData span{
+    left: 20px;
+  }
+  .mapBlock:before{
+    background-size: 1000px 60px;
+  }
+  .footerBlock {
+    overflow-x: visible;
+  }
+  .statistic_block .statisticDate {
+    width: 100%;
+    margin-bottom: 50px;
+    background-image: none;
+  }
+  .servicesData{
+    width: calc(100% - 10px);
+  }
+  .staffContainer {
+    width: 136px;
+    height: 136px;
+    margin-bottom: 90px;
+  }
+  .detailsStaffs {
+    margin-top: 30px;
+  }
+  .staffBlock{
+    padding-bottom: 20px;
+  }
+  .newsletterTitle{
+    font-family: VerbenaC;
+    text-align: center;
+    font-size: 35px;
+    color: #78000f;
+    left: 50%;
+    padding-top: 10px;
+    white-space: pre-wrap;
+  }
+  .newsletterEmail {
+    width: calc(100% - 20px);
+    padding-top: 10px;
+  }
+  .newsletterBlock{
+    height: 160px;
+  }
+  .contentFull{
+    max-width: calc(100% - 20px);
+  }
+  .reviewsData {
+    width: calc(100%);
+    margin: 5px 0;
+    padding: 10px;
+    height: auto;
+    max-width: calc(100% - 12px);
+  }
+  .block40feed,.block60feed {
+    display: inline-grid;
+    width: 100%;
+  }
+  .serviceBtn{
+    display: none;
+  }
+  .contactLine {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .contactLine .microButton {
+    cursor: pointer;
+    margin: 10px auto;
+    font-size: 11px;
+    padding: 8px 15px;
+  }
+  .formLineData input[type=text] {
+    width: calc(100% - 30px);
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #f64a5f;
+    padding-left: 10px;
+    margin: auto;
+    display: grid;
+  }
+  .formLineData textarea {
+    width: calc(100% - 34px);
+    height: 100px;
+    border-radius: 3px;
+    border: 1px solid #f64a5f;
+    padding-left: 10px;
+    resize: none;
+    display: grid;
+    margin: auto;
+  }
+  .formLineData.buttonLine {
+    padding-top: 15px;
+    height: 42px;
+    width: calc(100% - 20px);
+    margin: auto;
+  }
+  .formLineData .clearMessage, .formLineData .sendMessage {
+    margin: 0;
+    display: inline-block;
+    width: 50%;
+    padding: 10px 0;
+    text-align: center;
+  }
+}

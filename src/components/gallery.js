@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const IMAGES =
@@ -36,30 +37,45 @@ const IMAGES =
 }];
 
 let parseGallery = (a,css) => {
-    const dataGallery = a.map((comp, key) => <div key={key} style={css} className="galleryPhoto">
+    const dataGallery = a.map((comp, key) => <Fade key={key}><div key={key} style={css} className="galleryPhoto">
       <img src={comp.src} alt=""/>
       <div className="hoverImage" style={{  lineHeight: css.width+'px'}}><FontAwesomeIcon icon={['fas', 'search-plus']} /></div>
-    </div>);
+    </div></Fade>);
     return dataGallery
 }
 
 class GalleryBlock extends React.Component {
   constructor() {
     super();
-    this.state = {
-      height: (window.innerWidth / 4),
-      width: (window.innerWidth / 4)
-    };
+    if(document.body.offsetWidth > 800){
+      this.state = {
+        height: (window.innerWidth / 4),
+        width: (window.innerWidth / 4)
+      };
+    }else{
+      this.state = {
+        height: (window.innerWidth / 2),
+        width: (window.innerWidth / 2)
+      };
+    }
+
     this.updateDimensions = this.updateDimensions.bind(this);
   }
   componentDidMount() {
     window.addEventListener("resize", this.updateDimensions);
   }
   updateDimensions() {
-    this.setState({
-      height: (window.innerWidth / 4),
-      width: (window.innerWidth / 4)
-    });
+    if(document.body.offsetWidth > 800){
+      this.setState({
+        height: (window.innerWidth / 4),
+        width: (window.innerWidth / 4)
+      });
+    }else{
+      this.setState({
+        height: (window.innerWidth / 2),
+        width: (window.innerWidth / 2)
+      });
+    }
   }
   render() {
     return <div className="datablock galleryBlock">

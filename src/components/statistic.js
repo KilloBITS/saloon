@@ -1,7 +1,8 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const bg = require('../../data/images/bg2.png')
+const bg = require('../data/images/bg2.png')
 class StatisticBlock extends React.Component {
   render() {
     return <div className="datablock statisticBlock">
@@ -10,6 +11,7 @@ class StatisticBlock extends React.Component {
           <img src={bg} alt=""/>
         </div>
         <div className="statistic_block">
+          <Fade bottom>
           <div className="statisticDate">
             <div className="statisticIcon">
               <FontAwesomeIcon icon={['fas', 'clock']} />
@@ -34,6 +36,8 @@ class StatisticBlock extends React.Component {
               <div className="servicesButton">Детальнее</div>
             </div>
           </div>
+          </Fade>
+          <Fade bottom>
           <div className="statisticDate">
             <div className="statisticIcon">
               <FontAwesomeIcon icon={['fas', 'users']} />
@@ -48,6 +52,8 @@ class StatisticBlock extends React.Component {
               <div className="servicesButton">Посмотреть отзывы</div>
             </div>
           </div>
+          </Fade>
+          <Fade bottom>
           <div className="statisticDate">
             <div className="statisticIcon">
               <FontAwesomeIcon icon={['fas', 'user-edit']} />
@@ -63,6 +69,7 @@ class StatisticBlock extends React.Component {
               <div className="servicesButton">Записатся на прием</div>
             </div>
           </div>
+          </Fade>
         </div>
       </div>
     </div>

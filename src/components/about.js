@@ -1,13 +1,16 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
 class AboutBlock extends React.Component {
   render() {
     return <div className="datablock aboutBlock tm_pb_builder">
             <div className="content1024">
+              <Fade top>
               <div className="blockBigTitle" style={{color: 'black'}}>
-              <h2>about</h2>
-              О САЛОНЕ
+                <h2>about</h2>
+                О САЛОНЕ
               </div>
+              </Fade>
             </div>
             <div className="content1024" id="#tm_builder_outer_content">
               <div className="aboutSection">
@@ -15,10 +18,13 @@ class AboutBlock extends React.Component {
                   <div className="rowbox">
                     <div className="rowcolumn">
                       <div className="tm_pb_module tm-waypoint tm_pb_image tm_pb_animation_left tm_pb_image_0 tm_always_center_on_mobile tm-animated">
+                        <Fade left>
                         <img src="https://ld-wp.template-help.com/wordpress_64390/wp-content/uploads/2016/10/bg1.png" alt=""/>
+                        </Fade>
                       </div>
                     </div>
                     <div className="rowcolumn">
+                      <Fade right>
                       <hr className="tm_pb_module tm_pb_space tm_pb_divider_2"/>
                       <div className="tm_pb_text">
                       <p>
@@ -53,6 +59,7 @@ class AboutBlock extends React.Component {
                       </div>
                       <hr className="tm_pb_module tm_pb_space tm_pb_divider_4"/>
                       <div className="servicesButton">Детальная информация</div>
+                      </Fade>
                     </div>
                   </div>
                 </div>

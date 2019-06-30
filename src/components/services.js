@@ -1,18 +1,24 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class ServicesBlock extends React.Component {
   render() {
     return <div className="datablock servicesBlock">
       <div className="content1024">
+        <Fade top>
         <div className="blockBigTitle" style={{color: 'black'}}>
           <h2>pricing</h2>
           УСЛУГИ
         </div>
+        </Fade>
       </div>
       <div className="content1024">
         <div className="servicesTable">
+          <Fade left>
           <div className="serviceBtn prevService"><FontAwesomeIcon icon={['fas', 'chevron-left']} /></div>
+          </Fade>
+          <Fade>
           <div className="servicesData">
             <div className="serviceIcon" style={{backgroundPosition: '-200px 0px'}}></div>
             <div className="serviceTitle">Уход за ногтями</div>
@@ -32,6 +38,8 @@ class ServicesBlock extends React.Component {
             </div>
             <div className="servicesButton">Детальнее</div>
           </div>
+          </Fade>
+          <Fade>
           <div className="servicesData serviceCenter">
             <div className="serviceIcon" style={{backgroundPosition: '0px -465px'}}></div>
             <div className="serviceTitle">Уход за волосами</div>
@@ -51,6 +59,8 @@ class ServicesBlock extends React.Component {
             </div>
             <div className="servicesButton">Детальнее</div>
           </div>
+          </Fade>
+          <Fade>
           <div className="servicesData">
             <div className="serviceIcon" style={{backgroundPosition: '-200px -464px'}}></div>
             <div className="serviceTitle">Уход за телом</div>
@@ -70,7 +80,10 @@ class ServicesBlock extends React.Component {
             </div>
             <div className="servicesButton">Детальнее</div>
           </div>
+          </Fade>
+          <Fade right>
           <div className="serviceBtn nextService"><FontAwesomeIcon icon={['fas', 'chevron-right']} /></div>
+          </Fade>
         </div>
       </div>
     </div>

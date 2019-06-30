@@ -1,17 +1,21 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class StaffBlock extends React.Component {
   render() {
     return <div className="datablock reviewsBlock">
       <div className="content1024">
+        <Fade top>
         <div className="blockBigTitle" style={{color: 'black'}}>
           <h2>what people say?</h2>
           Отзывы
         </div>
+        </Fade>
       </div>
       <div className="contentFull">
-
+        <Flip top>
         <div className="reviewsData">
           <div className="reviewsDataRow">
             <div className="reviewsDataUserPhoto">
@@ -33,7 +37,8 @@ class StaffBlock extends React.Component {
             <div className="reviewsDataDate">30.06.2019</div>
           </div>
         </div>
-
+        </Flip>
+        <Flip top>
         <div className="reviewsData">
           <div className="reviewsDataRow">
             <div className="reviewsDataUserPhoto">
@@ -55,7 +60,8 @@ class StaffBlock extends React.Component {
             <div className="reviewsDataDate">30.06.2019</div>
           </div>
         </div>
-
+        </Flip>
+        <Flip top>
         <div className="reviewsData">
           <div className="reviewsDataRow">
             <div className="reviewsDataUserPhoto">
@@ -77,7 +83,8 @@ class StaffBlock extends React.Component {
             <div className="reviewsDataDate">30.06.2019</div>
           </div>
         </div>
-
+        </Flip>
+        <Flip top>
         <div className="reviewsData">
           <div className="reviewsDataRow">
             <div className="reviewsDataUserPhoto">
@@ -99,7 +106,8 @@ class StaffBlock extends React.Component {
             <div className="reviewsDataDate">30.06.2019</div>
           </div>
         </div>
-
+        </Flip>
+        <Flip top>
         <div className="reviewsData">
           <div className="reviewsDataRow">
             <div className="reviewsDataUserPhoto">
@@ -121,7 +129,8 @@ class StaffBlock extends React.Component {
             <div className="reviewsDataDate">30.06.2019</div>
           </div>
         </div>
-
+        </Flip>
+        <Flip top>
         <div className="reviewsData">
           <div className="reviewsDataRow">
             <div className="reviewsDataUserPhoto">
@@ -143,6 +152,7 @@ class StaffBlock extends React.Component {
             <div className="reviewsDataDate">30.06.2019</div>
           </div>
         </div>
+        </Flip>
       </div>
     </div>
   }
