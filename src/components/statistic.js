@@ -43,7 +43,10 @@ class StatisticBlock extends React.Component {
               <FontAwesomeIcon icon={['fas', 'users']} />
             </div>
             <div className="statisticText">
-              Только в нашем салоне более 10000
+              Только в нашем салоне более
+              <br/>
+              <b>1000</b>
+              <br/>
               довольных слиентов, которыми займаются
               только лючшие профессионалы.
               <br/>

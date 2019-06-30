@@ -18,10 +18,10 @@ class StaffBlock extends React.Component {
         <div className="staffTable">
           <Fade left>
           <div className="staffContainer">
-            <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person3.jpg'} alt=""/>
+            <img src={'http://templatevisual.com/demo/largeria/barberia/upload/mini_gallery_04.jpg'} alt=""/>
             <div className="staffInfoData">
-              <div className="staffInfoDataName">Jessica Priston</div>
-              <div className="staffInfoDataJob">Aphrodite – owner</div>
+              <div className="staffInfoDataName">Игорь</div>
+              <div className="staffInfoDataJob">Стилист - парикмахер</div>
               <div className="socialsMiniStaff">
                 <div className="socials_mini_icon"><a target="_blank" href={"https://vk.com/id203064133"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'vk']} /></a></div>
                 <div className="socials_mini_icon"><a target="_blank" href={"https://www.instagram.com/xx_kalinka_malinka_xx/"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div>
@@ -34,8 +34,8 @@ class StaffBlock extends React.Component {
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person1.jpg'} alt=""/>
             <div className="staffInfoData">
-              <div className="staffInfoDataName">Olivia Grosh</div>
-              <div className="staffInfoDataJob">Master Cosmetologist</div>
+              <div className="staffInfoDataName">Ольга</div>
+              <div className="staffInfoDataJob">Мастер маникьюра</div>
               <div className="socialsMiniStaff">
                 <div className="socials_mini_icon"><a target="_blank" href={"https://www.instagram.com/xx_kalinka_malinka_xx/"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div>
                 <div className="socials_mini_icon"><a target="_blank" href={"https://www.facebook.com/igor.kalinuk.3"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></div>
@@ -47,8 +47,8 @@ class StaffBlock extends React.Component {
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person2.jpg'} alt=""/>
             <div className="staffInfoData">
-              <div className="staffInfoDataName">Vanessa Hayes</div>
-              <div className="staffInfoDataJob">Massage Therapist</div>
+              <div className="staffInfoDataName">Ангелина</div>
+              <div className="staffInfoDataJob">Массажист</div>
               <div className="socialsMiniStaff">
                 <div className="socials_mini_icon"><a target="_blank" href={"https://www.instagram.com/xx_kalinka_malinka_xx/"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div>
                 <div className="socials_mini_icon"><a target="_blank" href={"https://www.facebook.com/igor.kalinuk.3"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></div>
@@ -58,10 +58,10 @@ class StaffBlock extends React.Component {
           </Fade>
           <Fade right>
           <div className="staffContainer">
-            <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person1.jpg'} alt=""/>
+            <img src={'http://templatevisual.com/demo/largeria/barberia/upload/mini_gallery_05.jpg'} alt=""/>
             <div className="staffInfoData">
-              <div className="staffInfoDataName">Stella Priston</div>
-              <div className="staffInfoDataJob">Aphrodite – owner</div>
+              <div className="staffInfoDataName">Владимир</div>
+              <div className="staffInfoDataJob">Массажист</div>
               <div className="socialsMiniStaff">
                 <div className="socials_mini_icon"><a target="_blank" href={"https://vk.com/id203064133"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'vk']} /></a></div>
                 <div className="socials_mini_icon"><a target="_blank" href={"https://www.instagram.com/xx_kalinka_malinka_xx/"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div>
@@ -74,8 +74,8 @@ class StaffBlock extends React.Component {
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person3.jpg'} alt=""/>
             <div className="staffInfoData">
-              <div className="staffInfoDataName">Stella Brooks</div>
-              <div className="staffInfoDataJob">Master Cosmetologist</div>
+              <div className="staffInfoDataName">Элеонора</div>
+              <div className="staffInfoDataJob">Мастер косметолог</div>
               <div className="socialsMiniStaff">
                 <div className="socials_mini_icon"><a target="_blank" href={"https://www.instagram.com/xx_kalinka_malinka_xx/"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div>
               </div>

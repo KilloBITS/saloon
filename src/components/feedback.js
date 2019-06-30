@@ -38,22 +38,22 @@ class FeedBack extends React.Component {
           <div className="block60feed">
             <form>
               <div className="formLineData">
-                <span>Имя</span>
+                <label>Имя</label>
                 <input type="text" className="formTextLine"/>
               </div>
 
               <div className="formLineData">
-                <span>Номер телефона</span>
+                <label>Номер телефона</label>
                 <input type="text" className="formTextLine"/>
               </div>
 
               <div className="formLineData">
-                <span>Електронная почта</span>
+                <label>Електронная почта</label>
                 <input type="text" className="formTextLine"/>
               </div>
 
               <div className="formLineData">
-                <span>Сообщение</span>
+                <label>Сообщение</label>
                 <textarea className="formTextLine"></textarea>
               </div>
 

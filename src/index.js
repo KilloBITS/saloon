@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -23,6 +24,9 @@ import FeedBack from './components/feedback.js'
 import MapBlock from './components/map.js'
 import FooterBlock from './components/footer.js'
 
+//Кабинет
+import Cabinet from './components/cabinet/cabinet.js'
+
 library.add(fab, faCheckSquare, faCoffee, fas);
 
 const background = require('./data/images/Depositphotos_2.png');
@@ -40,7 +44,7 @@ const handleScroll = () => {
   }
 };
 
-class BodyContent extends React.Component {
+class MainContent extends React.Component {
   componentDidMount () { //ставим фокус в input
     setTimeout(() => {
       document.getElementById('Preloader').className = 'Preloader fadeout';
@@ -51,9 +55,6 @@ class BodyContent extends React.Component {
   }
   render(){
     return <div className="contentData">
-      <Preloader/>
-      <TopMenu/>
-      <NavBar/>
       <Header background={background} logotype={logotype}/>
       <About/>
       <StatisticBlock/>
@@ -64,14 +65,38 @@ class BodyContent extends React.Component {
       <ReviewsBlock/>
       <FeedBack/>
       <MapBlock/>
-      <FooterBlock/>
+    </div>
+  }
+}
+
+class CabinetContent extends React.Component {
+  componentDidMount () { //ставим фокус в input
+    setTimeout(() => {
+      document.getElementById('Preloader').className = 'Preloader fadeout';
+      setTimeout(() => {
+        document.getElementById('Preloader').style.display = 'none'
+      }, 300);
+    },2500);
+  }
+  render(){
+    return <div className="contentData">
+      <Cabinet/>
     </div>
   }
 }
 
 ReactDOM.render(
   <Scrollbars onScroll={handleScroll} style={{ height: "calc(100%)" }} renderThumbVertical={props => <div className="thumb-vertical"/>} id="scrollBlock" >
-    <BodyContent/>
+    <Preloader/>
+    <TopMenu/>
+    <NavBar/>
+    <Router>
+      <div className="routerContent">
+        <Route path="/" exact component={MainContent}/>
+        <Route path="/profile" exact component={CabinetContent}/>
+      </div>
+    </Router>
+    <FooterBlock/>
   </Scrollbars>,
   document.getElementById('root')
 );

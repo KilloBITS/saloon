@@ -184,7 +184,7 @@
     margin: 5px 0;
     padding: 10px;
     height: auto;
-    max-width: calc(100% - 12px);
+    max-width: calc(100% - 20px);
   }
   .block40feed,.block60feed {
     display: inline-grid;

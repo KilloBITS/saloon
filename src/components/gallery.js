@@ -36,8 +36,9 @@ const IMAGES =
         thumbnail: require('../data/photo/8.jpg'),
 }];
 
-let parseGallery = (a,css) => {
-    const dataGallery = a.map((comp, key) => <Fade key={key}><div key={key} style={css} className="galleryPhoto">
+
+let parseGallery = (a,css,click) => {
+    const dataGallery = a.map((comp, key) => <Fade key={key}><div key={key} style={css} className="galleryPhoto" onClick={click}>
       <img src={comp.src} alt=""/>
       <div className="hoverImage" style={{  lineHeight: css.width+'px'}}><FontAwesomeIcon icon={['fas', 'search-plus']} /></div>
     </div></Fade>);
@@ -49,16 +50,19 @@ class GalleryBlock extends React.Component {
     super();
     if(document.body.offsetWidth > 800){
       this.state = {
+        openimagesrc: null,
         height: (window.innerWidth / 4),
         width: (window.innerWidth / 4)
       };
     }else{
       this.state = {
+        openimagesrc: null,
         height: (window.innerWidth / 2),
         width: (window.innerWidth / 2)
       };
     }
-
+    this.openphoto = this.openPhoto.bind(this);
+    this.closephoto = this.closephoto.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
   }
   componentDidMount() {
@@ -77,9 +81,31 @@ class GalleryBlock extends React.Component {
       });
     }
   }
+
+  openPhoto(a) {
+    const imageURL = a.currentTarget.getElementsByTagName('img')[0].src;
+    this.setState({
+      openimagesrc: imageURL
+    });
+    console.log(imageURL)
+  }
+
+  closephoto(a) {
+    this.setState({
+      openimagesrc: null
+    });
+  }
   render() {
     return <div className="datablock galleryBlock">
-      {parseGallery(IMAGES, {width: this.state.width, height: this.state.height} )}
+      <div className={(this.state.openimagesrc === null)?"imageModal hiden":"imageModal"} id="imageModal">
+        <div className="imageModalBlock">
+          <div className="closeimageModal" onClick={this.closephoto}>
+            <FontAwesomeIcon icon={['fas', 'times']} />
+          </div>
+          <img src={this.state.openimagesrc}/>
+        </div>
+      </div>
+      {parseGallery(IMAGES, {width: this.state.width, height: this.state.height}, this.openphoto )}
     </div>
   }
 }
