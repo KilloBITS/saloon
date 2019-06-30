@@ -30,6 +30,7 @@ class ServicesBlock extends React.Component {
               <li>Регулярный Маникюр</li>
               <li>Спа Маникюр</li>
             </div>
+            <div className="servicesButton">Детальнее</div>
           </div>
           <div className="servicesData serviceCenter">
             <div className="serviceIcon" style={{backgroundPosition: '0px -465px'}}></div>
@@ -48,6 +49,7 @@ class ServicesBlock extends React.Component {
               <li>Регулярный Маникюр</li>
               <li>Спа Маникюр</li>
             </div>
+            <div className="servicesButton">Детальнее</div>
           </div>
           <div className="servicesData">
             <div className="serviceIcon" style={{backgroundPosition: '-200px -464px'}}></div>
@@ -66,6 +68,7 @@ class ServicesBlock extends React.Component {
               <li>Регулярный Маникюр</li>
               <li>Спа Маникюр</li>
             </div>
+            <div className="servicesButton">Детальнее</div>
           </div>
           <div className="serviceBtn nextService"><FontAwesomeIcon icon={['fas', 'chevron-right']} /></div>
         </div>

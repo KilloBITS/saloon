@@ -4,9 +4,9 @@ class TopMenu extends React.Component {
   render() {
     return <div className="topMenu" id="topMenu">
       <div className="menuLeft">
-        <div className="socials_mini_icon"><a target="_blank" href={"#"}><FontAwesomeIcon icon={['fab', 'vk']} /></a></div>
-        <div className="socials_mini_icon"><a target="_blank" href={"#"}><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div>
-        <div className="socials_mini_icon"><a target="_blank" href={"#"}><FontAwesomeIcon icon={['fab', 'facebook']} /></a></div>
+        <div className="socials_mini_icon"><a target="_blank" href={"https://vk.com/id203064133"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'vk']} /></a></div>
+        <div className="socials_mini_icon"><a target="_blank" href={"https://www.instagram.com/xx_kalinka_malinka_xx/"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div>
+        <div className="socials_mini_icon"><a target="_blank" href={"https://www.facebook.com/igor.kalinuk.3"} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'facebook']} /></a></div>
       </div>
       <div className="content1024">
         <div className="menuBtnTopBlock">

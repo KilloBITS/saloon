@@ -5,6 +5,11 @@ body{
 }
 
 @font-face {
+  font-family: VerbenaC; /* Имя шрифта */
+  src: url(fonts/17007.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
   font-family: ItalicText; /* Имя шрифта */
   src: url(fonts/17008.otf); /* Путь к файлу со шрифтом */
 }
@@ -23,6 +28,8 @@ body{
   font-family: Montserrat; /* Имя шрифта */
   src: url(fonts/montserrat.ttf); /* Путь к файлу со шрифтом */
 }
+
+
 
 #root {
     width: 100%;
@@ -43,8 +50,42 @@ body{
   display: none;
 }
 
+.toTopButton{
+  position: fixed;
+  z-index: -10;
+  right: 10px;
+  bottom: 10px;
+  width: 45px;
+  height: 45px;
+  background-color: #fc7272;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: 4px solid rgba(246, 74, 95, 0.27);
+  opacity: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.toTopButton.showTopBtn{
+  z-index: 20;
+  opacity: 1;
+}
+
+.fontAwesomHref{
+
+}
+
 .content1024{
   max-width: 1224px;
+  margin: auto;
+  position: relative;
+}
+
+.contentFull{
+  max-width: calc(100% - 200px);
   margin: auto;
   position: relative;
 }
@@ -58,6 +99,7 @@ body{
   margin: auto;
   margin-top: 40px;
   position: relative;
+  text-transform: uppercase;
 }
 
 .blockBigTitle h2{
@@ -70,6 +112,7 @@ body{
   width: fit-content;
   margin: 0;
   margin-left: -30px;
+  text-transform: lowercase;
 }
 
 /** Menu **/
@@ -256,6 +299,23 @@ body{
   z-index: 10;
   list-style-type: none;
 }
+.dots{
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ee3f81;
+  display: inline-block;
+  margin: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.undefined.dots{
+
+}
+.active.dots{
+  background: #fc7272;
+}
+
 .slider .dots-container li {
   display: inline-block;
   padding: 5px;
@@ -347,7 +407,7 @@ body{
 .headerInfoTitle{
   color: #fc7272;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 70px;
   font-family: DefaultText;
   letter-spacing: 0px;
   position: absolute;
@@ -355,10 +415,12 @@ body{
   bottom: calc(100% + -15px);
   left: 0;
   width: 100%;
+  white-space: nowrap;
+  text-shadow: 3px 3px 0px #e3a2a2;
 }
 
 .headerInfoText{
-  color: #30203e;
+  color: #0a0a31;
   font-size: 20px;
   font-family: DefaultText;
   letter-spacing: 1px;
@@ -466,15 +528,43 @@ body{
   margin-top: -100px;
 }
 
+.statisticIcon{
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  color: #f8526b;
+  margin-top: -30px;
+}
+
+.statisticIcon svg{
+  background-color: white;
+}
+
+.statisticText{
+  font-family: DefaultText;
+  text-align: center;
+  height: 250px;
+  position: relative;
+}
+
+.statisticText .servicesButton{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,0);
+}
+
 .statistic_block .statisticDate{
   width: calc(100% / 3 - 12px);
   margin: 5px;
-  background-color: #f3f3f3;
-  height: 100%;
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #e7e7e7;
+  background-color: #ffffff;
+  height: calc(100% - 100px);
+  display: inline-table;
+  border-radius: 0;
+  border-top: 1px solid #f64a5f;
   transition: 0.3s;
+  background-image: linear-gradient(0deg, rgb(248, 248, 248), white);
 }
 
 .statistic_block .statisticDate:hover{
@@ -519,7 +609,6 @@ body{
   height: 100%;
   display: inline-grid;
   margin-top: 40px;
-  border-bottom: 1px solid pink;
   margin: 40px 5px 0 5px;
   padding-bottom: 10px;
 }
@@ -558,12 +647,33 @@ body{
   padding-top: 15px;
   margin-top: 15px;
   border-top: 1px solid pink;
+  border-bottom: 1px solid pink;
+  padding-bottom: 20px;
 }
 
+.servicesButton{
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px 35px;
+  background-color: #f64a5f;
+  color: white;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-family: DefaultText;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.servicesButton:hover{
+  background-color: #c53244;
+  box-shadow: 2px 2px 0px 0px #891826;
+}
 /** Галерея **/
 .galleryBlock{
   height: fit-content;
-  padding: 30px 0;
 }
 
 .galleryPhoto{
@@ -604,4 +714,273 @@ body{
   left: 50%;
   transform: translate(-50%, 0);
   transition: 0.3s;
+}
+
+/** Отзывы **/
+.reviewsBlock{
+  height: auto;
+}
+
+.reviewsBlock .contentFull{
+  margin-top: 30px;
+}
+
+.reviewsData{
+  width: calc(100% / 2 - 40px);
+  display: inline-flex;
+  background-color: #fff0f3;
+  margin: 10px;
+  padding: 10px;
+  height: 130px;
+}
+
+.reviewsDataRow{
+  width: 100px;
+  display: inline-block;
+}
+
+.reviewsDataUserPhoto{
+  border-radius: 150px;
+  overflow: hidden;
+  width: fit-content;
+  width: 92px;
+  height: 92px;
+}
+
+.reviewsDataUserPhoto img{
+  max-width: 92px;
+  max-height:92px;
+}
+
+.contentRowReviews{
+  width: calc(100% - 100px);
+  font-family: DefaultText;
+  position: relative;
+}
+
+.reviewsDataText{
+    margin-bottom: 10px;
+}
+
+.reviewsDataStars{
+  color: #ff6f88;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.reviewsDataUsers{
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #f64a5f;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.reviewsDataDate{
+  right: 0px;
+  bottom: 0;
+  color: silver;
+}
+/** Персонал **/
+.staffBlock{
+  height: auto;
+  padding-bottom: 100px;
+}
+
+.staffTable{
+  width: fit-content;
+  margin: auto;
+}
+
+.staffContainer{
+  display: inline-block;
+  width: 190px;
+  height: 190px;
+  margin: 20px;
+  position: relative;
+  text-align: center;
+  border: 2px solid #fc84b4;
+  cursor: pointer;
+  border-radius: 1000px;
+}
+
+.staffContainer::after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  height: 30px;
+  width: 2px;
+  background-color: #fc84b4;
+}
+
+.staffContainer img{
+  max-width: 100%;
+  border-radius: 1000px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+}
+
+.staffInfoData{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: calc(100% + 35px);
+  white-space: nowrap;
+  font-family: DefaultText;
+  color: #df6998;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: default;
+}
+
+.staffInfoData .staffInfoDataName{
+    font-size: 18px;
+}
+
+.staffInfoData .staffInfoDataJob{
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.socialsMiniStaff{
+  width: fit-content;
+  margin: auto;
+  padding-top: 0px;
+  border-top: 1px solid #ca2a6a;
+  margin-top: 5px;
+}
+
+.socialsMiniStaff .socials_mini_icon{
+  display: inline-grid;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.socialsMiniStaff .socials_mini_icon a{
+  color: #ca2a6a;
+}
+
+.detailsStaffs{
+  width: 100%;
+  margin-top: 110px;
+  border-top: 1px solid pink;
+}
+
+.fontAwesomHref{
+  position: absolute;
+  left: 50%;
+  top: -16px;
+  font-size: 35px;
+  color: pink;
+  background-color: white;
+  padding: 0 10px;
+  transform: translate(-50%, 0);
+}
+
+.detailsStaffText{
+  width: calc(100% - 60px);
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  font-family: DefaultText;
+  color: #4d132a;
+  font-size: 20px;
+}
+
+/** Рассылка **/
+.newsletterBlock{
+  height: 200px;
+  background-color: #ffa6bb;
+  background-image: url(https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/bg1.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.newsletterdata{
+
+}
+
+.newsletterTitle{
+  font-family: VerbenaC;
+  text-align: center;
+  font-size: 41px;
+  color: #78000f;
+  left: 50%;
+  white-space: nowrap;
+  padding-top: 30px;
+}
+
+.newsletterEmail{
+  width: calc(100% - 300px);
+  padding-top: 30px;
+  margin: auto;
+}
+
+.newsletterEmail .emailarea{
+  width: calc(100% - 164px);
+  display: inline-block;
+  height: 36px;
+  padding-left: 10px;
+  border: 1px solid #f64a5f;
+  border-radius: 3px 0 0 3px;
+}
+
+.newsletterEmail .emailbtn{
+  width: 150px;
+  display: inline-block;
+  border: 0;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: #f64a5f;
+  color: white;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+/** Карта **/
+.mapBlock{
+    height: 600px;
+}
+
+.mapBlock:before {
+    background: transparent url(../data/images/volna.svg) top no-repeat;
+    background-size: 3000px 151px;
+    content: "";
+    display: block;
+    height: 151px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -5px;
+    filter: invert(1) contrast(1.5);
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/** Футер **/
+.footerBlock{
+  background-color: #1b1d1e;
+}
+
+.footerBlock:before {
+    background: transparent url(../data/images/volna.svg) top no-repeat;
+    background-size: 3000px 151px;
+    content: "";
+    display: block;
+    height: 151px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    bottom: calc(100% - 5px);
 }

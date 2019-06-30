@@ -30,9 +30,13 @@ class Slider extends React.Component {
     intervalBetweenSlides() {
         if (this.state.autoplay === true) {
             if (this.state.active === this.state.max - 1) {
-                this.state.active = 0;
+                this.setState({
+                    active: 0
+                });
             } else {
-                this.state.active++;
+                this.setState({
+                    active: this.state.active+1
+                });
             }
             this.setState({
                 active: this.state.active
@@ -79,17 +83,13 @@ class Slider extends React.Component {
         return this.state.slides.map( (item, index) => (
           <div className='each-slide' key={ index } style={{ backgroundImage: item.eachSlide }}>
             <div className="headerInfo">
-              <div className="headerInfoTitle" data-descr="Салон красоты">Салон красоты</div>
+              <div className="headerInfoTitle" data-descr="Салон красоты">
+                Салон красоты
+              </div>
               <div className="headerInfoText">
-                Салон красоты Название это салон с историей и многолетним опытом.
-                Первый салон был создан в 2003 году для модных и деловых людей,
-                желающих выглядеть стильно, ухоженно и ценящих время.
-                В наших салонах мы воплощаем лучшие тренды парикмахерского искусства,
-                ногтевой эстетики и косметологии,
-                в то же время уделяя особое внимание качеству и безопасности наших услуг,
-                а также профессиональному росту наших специалистов.
-                Главная наша цель – создавать красоту,
-                учитывая индивидуальные потребности наших клиентов.
+                «Настоящее волшебство» - вот как описывают клиенты работу профессионала.
+                <br/>
+                Удивительно, как изменения внешности способны повлиять на жизнь человека!
               </div>
             </div>
           </div>
@@ -98,10 +98,8 @@ class Slider extends React.Component {
     }
     renderDots() {
       return this.state.slides.map( (item, index) => (
-          <li className={this.isActive(index) + ' dots' } key={ index } ref='dots'
-          onClick={ this.dots.bind(this, index) } >
-              <a>&#9679;</a>
-          </li>
+          <div className={this.isActive(index) + ' dots' } key={ index } ref='dots'
+          onClick={ this.dots.bind(this, index) } ></div>
         )
       );
     }
@@ -149,9 +147,9 @@ class Slider extends React.Component {
                     <ul className='dots-container'>
                         { this.renderDots() }
                     </ul>
-                    <a className='toggle-play' onClick={ this.toggleAutoPlay.bind(this) }>
+                    <i className='toggle-play' onClick={ this.toggleAutoPlay.bind(this) }>
                         { this.renderPlayStop() }
-                    </a>
+                    </i>
                 </div>
             </div>
         );

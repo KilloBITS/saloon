@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const IMAGES =
@@ -38,8 +37,8 @@ const IMAGES =
 
 let parseGallery = (a,css) => {
     const dataGallery = a.map((comp, key) => <div key={key} style={css} className="galleryPhoto">
-    <img src={comp.src}/>
-    <div className="hoverImage" style={{  lineHeight: css.width+'px'}}><FontAwesomeIcon icon={['fas', 'search-plus']} /></div>
+      <img src={comp.src} alt=""/>
+      <div className="hoverImage" style={{  lineHeight: css.width+'px'}}><FontAwesomeIcon icon={['fas', 'search-plus']} /></div>
     </div>);
     return dataGallery
 }
