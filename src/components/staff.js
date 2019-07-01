@@ -16,7 +16,7 @@ class StaffBlock extends React.Component {
       </div>
       <div className="content1024">
         <div className="staffTable">
-          <Fade left>
+          <Fade>
           <div className="staffContainer">
             <img src={'http://templatevisual.com/demo/largeria/barberia/upload/mini_gallery_04.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -30,7 +30,7 @@ class StaffBlock extends React.Component {
             </div>
           </div>
           </Fade>
-          <Fade left>
+          <Fade>
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person1.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -43,7 +43,7 @@ class StaffBlock extends React.Component {
             </div>
           </div>
           </Fade>
-          <Fade bottom>
+          <Fade>
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person2.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -56,7 +56,7 @@ class StaffBlock extends React.Component {
             </div>
           </div>
           </Fade>
-          <Fade right>
+          <Fade>
           <div className="staffContainer">
             <img src={'http://templatevisual.com/demo/largeria/barberia/upload/mini_gallery_05.jpg'} alt=""/>
             <div className="staffInfoData">
@@ -70,7 +70,7 @@ class StaffBlock extends React.Component {
             </div>
           </div>
           </Fade>
-          <Fade right>
+          <Fade>
           <div className="staffContainer">
             <img src={'https://ld-wp.template-help.com/wordpress_62118/wp-content/uploads/2016/06/person3.jpg'} alt=""/>
             <div className="staffInfoData">

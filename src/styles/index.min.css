@@ -8,14 +8,15 @@
     height: 50px;
     z-index: 21;
   }
-
+  .formLineData label{
+    right: 20px;
+  }
   .mobBtnLineDef{
     width: 100%;
     height: 5px;
     background-color: black;
     margin-bottom: 10px;
   }
-
   .headerBackground::after{
     background-position: 100% calc(100% + 0px);
   }
@@ -211,6 +212,7 @@
     padding-left: 10px;
     margin: auto;
     display: grid;
+    border-bottom-width: 3px;
   }
   .formLineData textarea {
     width: calc(100% - 34px);
@@ -221,6 +223,7 @@
     resize: none;
     display: grid;
     margin: auto;
+    border-bottom-width: 3px;
   }
   .formLineData.buttonLine {
     padding-top: 15px;
@@ -234,5 +237,18 @@
     width: 50%;
     padding: 10px 0;
     text-align: center;
+  }
+  .staffTable{
+    display: block;
+    text-align: center;
+  }
+  .imageModal .imageModalBlock {
+    width: 100%;
+  }
+  .mapBlock {
+    height: 400px;
+  }
+  .content1000{
+    overflow: hidden;
   }
 }
