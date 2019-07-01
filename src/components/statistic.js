@@ -47,7 +47,7 @@ class StatisticBlock extends React.Component {
               <br/>
               <b>1000</b>
               <br/>
-              довольных слиентов, которыми займаются
+              довольных клиентов, которыми занимаются
               только лючшие профессионалы.
               <br/>
               <br/>
@@ -68,7 +68,6 @@ class StatisticBlock extends React.Component {
               У нас вы можете сами выбрать время которое вам удобно,
               <br/>
               а так же выбрать специалиста который будет вас обслуживать
-
               <div className="servicesButton">Записатся на прием</div>
             </div>
           </div>

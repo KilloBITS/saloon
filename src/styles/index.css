@@ -87,11 +87,15 @@ body{
   }
 }
 
+#scrollBlock div:nth-child(1){
+  overflow-x: hidden;
+}
 
 .contentData, .datablock{
   width: 100%;
   height: 100%;
   position: relative;
+  background-color: #fcfcfc;
 }
 
 .thumb-vertical{
