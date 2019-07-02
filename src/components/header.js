@@ -79,8 +79,6 @@ class Slider extends React.Component {
     renderSlides() {
         return this.state.slides.map( (item, index) => (
           <div className='each-slide' key={ index } style={{ backgroundImage: item.eachSlide }}>
-            
-
             <div className="bigLogotype">
               <img src={'https://i.pinimg.com/originals/05/5c/eb/055cebba54fcd09aa759ebb9c964ec53.png'} alt=""/>
               <div className="headerInfoText">

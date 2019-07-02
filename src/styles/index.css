@@ -1283,3 +1283,15 @@ input:focus {
 .imageModal .imageModalBlock img{
   max-width: 100%;
 }
+
+
+/* <div className="headerInfo">
+  <div className="headerInfoTitle" data-descr="Салон красоты">
+    Салон красоты
+  </div>
+  <div className="headerInfoText">
+    «Настоящее волшебство» - вот как описывают клиенты работу профессионала.
+    <br/>
+    Удивительно, как изменения внешности способны повлиять на жизнь человека!
+  </div>
+</div> */
