@@ -27,7 +27,10 @@ class Footer extends React.Component {
           <div className="footerCopiright">
             "Название" (с) 2019, Все права защищены.
           </div>
-          <div className="footerAuthor">Site created by Ihor Kaleniuk</div>
+          <div className="footerAuthor">
+            Site created by
+            <a href={"http://kaleniuk.top/"} target="_blank" rel="noopener noreferrer">Ihor Kaleniuk</a>
+          </div>
         </div>
         <div className="footerblockdata dataRight">
           <div className="footerNavMenuBtn">Правила</div>

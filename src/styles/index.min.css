@@ -1,12 +1,27 @@
 @media screen and (max-width: 800px) {
+  .slider .each-slide{
+    background-position: calc(100% + 50px);
+  }
+  div.backgroundFilter{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(252, 114, 114, 0.60);
+    z-index: 1;
+    background-image: url(https://www.transparenttextures.com/patterns/batthern.png);
+  }
   .mobileMenuBtn{
     display: block;
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
     width: 50px;
     height: 50px;
-    z-index: 21;
+    z-index: 2;
+    cursor: pointer;
   }
   .formLineData label{
     right: 20px;
@@ -14,8 +29,57 @@
   .mobBtnLineDef{
     width: 100%;
     height: 5px;
-    background-color: black;
+    background-color: white;
     margin-bottom: 10px;
+    transition: 0.3s;
+  }
+
+  .mobileCloseButton{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 21;
+    cursor: pointer;
+  }
+
+  .mobileCloseButton .mobBtnLineDef{
+    background-color: black;
+    position: absolute;
+  }
+
+  .mobileCloseButton .mobBtnLineDef:nth-child(1){
+    transform: rotate(45deg);
+    top: 15px;
+  }
+  .mobileCloseButton .mobBtnLineDef:nth-child(2){
+    transform: rotate(-45deg);
+    top: 15px;
+  }
+  .navbar.navbarEnabled{
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f64b60;
+    box-shadow: 0px 1px 3px 1px pink;
+    transition: 0.3s;
+  }
+  .mobileMenuBtn.blackBack .mobBtnLineDef{
+    background-color: black;
+  }
+  .headerInfo{
+    display: none;
+  }
+  .bigLogotype{
+
+  }
+  .bigLogotype img{
+    max-width: calc(100%);
   }
   .headerBackground::after{
     background-position: 100% calc(100% + 0px);
@@ -31,16 +95,25 @@
   }
   .topMenu.openMenu{
     opacity: 1;
-    z-index: 21;
+    z-index: 22;
+  }
+  .menuLeft{
+    transform: translate(-50%,0);
+    bottom: 10px;
+    left: 50%;
+    top: auto;
+  }
+  .menuLeft .socials_mini_icon a{
+    color: black;
   }
   .menuRight {
     position: absolute;
-    right: 0;
+    left: 50%;
     font-size: 14px;
     top: 10px;
     transform: none;
-    width: 100%;
-    text-align: center;
+    width: fit-content;
+    transform: translate(-50%, 0);
     height: 30px;
     line-height: 30px;
   }
@@ -299,7 +372,6 @@
     top: 50%;
     background-color: #8c8d8d;
   }
-
   .toTopFooter::before{
     right: 20px;
   }
@@ -307,7 +379,6 @@
   .toTopFooter::after{
     left: 20px;
   }
-
   .toTopFooter .toTopFooterBtn{
     height: 60px;
     position: relative;
@@ -317,5 +388,8 @@
     margin: auto;
     cursor: pointer;
     color: #8c8d8d;
+  }
+  .footerAuthor a{
+
   }
 }

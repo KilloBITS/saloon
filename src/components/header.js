@@ -1,15 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const background = require('../data/images/Depositphotos_2.png');
+
 const background2 = require('../data/images/Depositphotos_3.png');
 class Slider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             slides: [
-              {
-                eachSlide: 'url('+background+')',
-              },
               {
                 eachSlide: 'url('+background2+')',
               }
@@ -92,6 +89,15 @@ class Slider extends React.Component {
                 Удивительно, как изменения внешности способны повлиять на жизнь человека!
               </div>
             </div>
+
+            <div className="bigLogotype">
+              <img src={'https://i.pinimg.com/originals/05/5c/eb/055cebba54fcd09aa759ebb9c964ec53.png'} alt=""/>
+              <div className="headerInfoText">
+                «Настоящее волшебство» - вот как описывают клиенты работу профессионала.
+                <br/>
+                Удивительно, как изменения внешности способны повлиять на жизнь человека!
+              </div>
+            </div>
           </div>
         )
       );
@@ -113,42 +119,49 @@ class Slider extends React.Component {
         return playStop;
     }
     renderArrows() {
-        return (
-            <div className="arrowsPrewAnfNext">
-                <button
-                type='button'
-                className='arrows prev'
-                onClick={ this.prevOne.bind(this) } >
-                    <svg fill='#FFFFFF' width='50' height='50' viewBox='0 0 24 24'>
-                        <path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/>
-                        <path d='M0 0h24v24H0z' fill='none'/>
-                    </svg>
-                </button>
-                <button
-                type='button'
-                className='arrows next'
-                onClick={this.nextOne.bind(this)} >
-                    <svg fill='#FFFFFF' height='50' viewBox='0 0 24 24' width='50'>
-                        <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/>
-                        <path d='M0 0h24v24H0z' fill='none'/>
-                    </svg>
-                </button>
-            </div>
-        );
+        console.log(this.state.slides.length)
+        if(this.state.slides.length > 1){
+          return (
+              <div className="arrowsPrewAnfNext">
+                  <button
+                  type='button'
+                  className='arrows prev'
+                  onClick={ this.prevOne.bind(this) } >
+                      <svg fill='#FFFFFF' width='50' height='50' viewBox='0 0 24 24'>
+                          <path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/>
+                          <path d='M0 0h24v24H0z' fill='none'/>
+                      </svg>
+                  </button>
+                  <button
+                  type='button'
+                  className='arrows next'
+                  onClick={this.nextOne.bind(this)} >
+                      <svg fill='#FFFFFF' height='50' viewBox='0 0 24 24' width='50'>
+                          <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/>
+                          <path d='M0 0h24v24H0z' fill='none'/>
+                      </svg>
+                  </button>
+              </div>
+          );
+        }else{
+          return ('');
+        }
+
     }
     render(){
         return (
             <div>
                 <div className='slider'>
                     <div className='wrapper' style={ this.setSliderStyles() }>
-                        { this.renderSlides() }
+                      <div className="backgroundFilter"></div>
+                      { this.renderSlides() }
                     </div>
                     { this.renderArrows() }
                     <ul className='dots-container'>
-                        { this.renderDots() }
+                        { (this.state.slides.length > 1)?this.renderDots():"" }
                     </ul>
                     <i className='toggle-play' onClick={ this.toggleAutoPlay.bind(this) }>
-                        { this.renderPlayStop() }
+                        { (this.state.slides.length > 1)?this.renderPlayStop():"" }
                     </i>
                 </div>
             </div>

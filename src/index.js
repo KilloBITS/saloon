@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -35,12 +35,17 @@ const logotype = require('./data/images/logotype.png');
 const handleScroll = () => {
   const scrollBlock = document.getElementById('scrollBlock');
   let scrolltop = scrollBlock.getElementsByTagName('div')[0].scrollTop;
+
   if(scrolltop >= 800 && scrolltop < (scrollBlock.getElementsByTagName('div')[0].scrollHeight - document.getElementById('scrollBlock').offsetHeight - 500) ){
     document.getElementById('topMenu').className = 'topMenu scrollMenu';
     document.getElementById('toTopButton').className = 'toTopButton showTopBtn';
+    document.getElementById('mobileMenuBtn').className = 'mobileMenuBtn blackBack';
+    document.getElementById('navbar').className = 'navbar navbarEnabled';
   }else{
     document.getElementById('topMenu').className = 'topMenu';
     document.getElementById('toTopButton').className = 'toTopButton';
+    document.getElementById('mobileMenuBtn').className = 'mobileMenuBtn';
+    document.getElementById('navbar').className = 'navbar';
   }
 };
 

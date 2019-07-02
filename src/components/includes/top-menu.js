@@ -2,6 +2,9 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class TopMenu extends React.Component {
+  toCloseMobileMenu(){
+      document.getElementById('topMenu').className = 'topMenu';
+  }
   render() {
     return <div className="topMenu" id="topMenu">
       <div className="menuLeft">
@@ -26,6 +29,10 @@ class TopMenu extends React.Component {
         <div className="authBtn">Авторизация</div>
         <div className="verticalLine"></div>
         <div className="authBtn">Регистрация</div>
+      </div>
+      <div className="mobileCloseButton" onClick={this.toCloseMobileMenu.bind(this)}>
+        <div className="mobBtnLineDef"></div>
+        <div className="mobBtnLineDef"></div>
       </div>
     </div>
   }

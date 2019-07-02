@@ -4,9 +4,12 @@ class NavBar extends React.Component {
   toTopThisScroll(){
     document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: 0, behavior: 'smooth'});
   }
+  toOpenMobileMenu(){
+      document.getElementById('topMenu').className = 'topMenu openMenu';
+  }
   render() {
-    return <div className="navbar">
-      <div className="mobileMenuBtn">
+    return <div className="navbar" id="navbar">
+      <div className="mobileMenuBtn" id="mobileMenuBtn" onClick={this.toOpenMobileMenu.bind(this)}>
         <div className="mobBtnLineDef"></div>
         <div className="mobBtnLineDef"></div>
         <div className="mobBtnLineDef"></div>

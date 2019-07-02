@@ -102,7 +102,7 @@ class GalleryBlock extends React.Component {
           <div className="closeimageModal" onClick={this.closephoto}>
             <FontAwesomeIcon icon={['fas', 'times']} />
           </div>
-          <img src={this.state.openimagesrc}/>
+          <img src={this.state.openimagesrc} alt=""/>
         </div>
       </div>
       {parseGallery(IMAGES, {width: this.state.width, height: this.state.height}, this.openphoto )}
