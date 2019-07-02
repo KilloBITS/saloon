@@ -79,16 +79,7 @@ class Slider extends React.Component {
     renderSlides() {
         return this.state.slides.map( (item, index) => (
           <div className='each-slide' key={ index } style={{ backgroundImage: item.eachSlide }}>
-            <div className="headerInfo">
-              <div className="headerInfoTitle" data-descr="Салон красоты">
-                Салон красоты
-              </div>
-              <div className="headerInfoText">
-                «Настоящее волшебство» - вот как описывают клиенты работу профессионала.
-                <br/>
-                Удивительно, как изменения внешности способны повлиять на жизнь человека!
-              </div>
-            </div>
+            
 
             <div className="bigLogotype">
               <img src={'https://i.pinimg.com/originals/05/5c/eb/055cebba54fcd09aa759ebb9c964ec53.png'} alt=""/>
