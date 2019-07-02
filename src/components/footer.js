@@ -1,8 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Footer extends React.Component {
+  toTopThisScroll(){
+    document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: 0, behavior: 'smooth'});
+  }
   render() {
     return <div className="datablock footerBlock">
+      <div className="toTopFooter">
+        <div className="toTopFooterBtn" onClick={this.toTopThisScroll.bind(this)}>
+          <FontAwesomeIcon icon={['fas', 'arrow-up']} />
+        </div>
+      </div>
       <div className="content1000">
         <div className="footerblockdata dataLeft">
           <div className="footerNavMenuBtn">О нас</div>

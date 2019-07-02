@@ -35,7 +35,7 @@ const logotype = require('./data/images/logotype.png');
 const handleScroll = () => {
   const scrollBlock = document.getElementById('scrollBlock');
   let scrolltop = scrollBlock.getElementsByTagName('div')[0].scrollTop;
-  if(scrolltop >= 800){
+  if(scrolltop >= 800 && scrolltop < (scrollBlock.getElementsByTagName('div')[0].scrollHeight - document.getElementById('scrollBlock').offsetHeight - 500) ){
     document.getElementById('topMenu').className = 'topMenu scrollMenu';
     document.getElementById('toTopButton').className = 'toTopButton showTopBtn';
   }else{

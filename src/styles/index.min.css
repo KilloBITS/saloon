@@ -31,6 +31,7 @@
   }
   .topMenu.openMenu{
     opacity: 1;
+    z-index: 21;
   }
   .menuRight {
     position: absolute;
@@ -146,9 +147,14 @@
     width: 100%;
     margin-bottom: 50px;
     background-image: none;
+    margin-left: 0;
+  }
+  .serviceText{
+    width: calc(100% - 45px);
   }
   .servicesData{
     width: calc(100% - 10px);
+    margin: 15px 5px 0 5px;
   }
   .staffContainer {
     width: 136px;
@@ -249,6 +255,67 @@
     height: 400px;
   }
   .content1000{
-    overflow: hidden;
+    overflow-x: hidden;
+  }
+  .footerblockdata.dataCenter {
+    width: 100%;
+    text-align: center;
+  }
+  .footerblockdata.dataLeft {
+    text-align: left;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .footerblockdata.dataRight {
+    display: none;
+  }
+  .toTopFooter{
+    position: absolute;
+    bottom: calc(100% + 30px);
+    z-index: 2;
+    text-align: center;
+    font-size: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 60px;
+    line-height: 40px;
+  }
+  .footerblockdata.dataCenter .footerLogotype {
+      position: static;
+      top: -80px;
+      left: 50%;
+      transform: none;
+      z-index: 1;
+      width: 100%;
+      text-align: center;
+  }
+  .toTopFooter::before,.toTopFooter::after{
+    content: '';
+    position: absolute;
+    width: calc(50% - 50px);
+    height: 2px;
+    top: 50%;
+    background-color: #8c8d8d;
+  }
+
+  .toTopFooter::before{
+    right: 20px;
+  }
+
+  .toTopFooter::after{
+    left: 20px;
+  }
+
+  .toTopFooter .toTopFooterBtn{
+    height: 60px;
+    position: relative;
+    width: 100%;
+    line-height: 60px;
+    width: 60px;
+    margin: auto;
+    cursor: pointer;
+    color: #8c8d8d;
   }
 }
