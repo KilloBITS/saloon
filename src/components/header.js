@@ -3,7 +3,6 @@ import Lottie from 'react-lottie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const background2 = require('../data/images/87e37abb-0ed8-4350-8e79-14a29b319296.jpg');
-const videoBack = require('../data/video/butterfly-short.mp4')
 class Slider extends React.Component {
     constructor(props) {
         super(props);
@@ -161,6 +160,12 @@ class Slider extends React.Component {
 };
 
 class HeaderBlock extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      currentLocation: window.location.origin.toString()
+    }
+  }
   render() {
     let headergolfthrid={
         renderer:'svg',
@@ -171,7 +176,7 @@ class HeaderBlock extends React.Component {
             progressiveLoad:!1,
             preserveAspectRatio:'xMaxYMax slice'
         },
-        path:'http://localhost:5001/header_vast.json'
+        path: this.state.currentLocation+'/header_vast.json'
     };
 
     return <div className="datablock headerBlock">

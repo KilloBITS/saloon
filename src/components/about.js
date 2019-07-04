@@ -6,7 +6,7 @@ class AboutBlock extends React.Component {
     return <div className="datablock aboutBlock tm_pb_builder" id="ABOUT">
             <div className="content1024">
               <Fade>
-              <div className="blockBigTitle" style={{color: 'black', paddingTop: 0}}>
+              <div className="blockBigTitle" style={{color: 'black'}}>
                 <h2>about</h2>
                 О САЛОНЕ
               </div>

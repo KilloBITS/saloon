@@ -15,7 +15,7 @@ class Preloader extends React.Component {
           id="foo"
           option={{
             file: svg,
-            duration: 300,
+            duration: 100,
             animTimingFunction: 'EASE',
             type: 'oneByOne',
             onReady: console.log
