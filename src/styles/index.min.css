@@ -4,6 +4,7 @@
   }
   div.backgroundFilter{
     display: block;
+    z-index: 10;
   }
   .mobileMenuBtn{
     display: block;
@@ -41,6 +42,9 @@
     background-color: black;
     position: absolute;
   }
+  .videoBlock{
+    z-index: 5;
+  }
   .videoBlock video {
     min-height: 100%;
     min-width: 100%;
@@ -72,7 +76,7 @@
     display: none;
   }
   .bigLogotype{
-
+    z-index: 11;
   }
   .bigLogotype img{
     max-width: calc(100%);
