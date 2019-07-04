@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 
 class FeedBack extends React.Component {
   render() {
-    return <div className="datablock feedBackBlock">
+    return <div className="datablock feedBackBlock" id="FEEDBACK">
       <div className="content1024">
         <Fade top>
         <div className="blockBigTitle" style={{color: 'black'}}>

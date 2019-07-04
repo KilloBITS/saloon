@@ -29,23 +29,27 @@ import Cabinet from './components/cabinet/cabinet.js'
 
 library.add(fab, faCheckSquare, faCoffee, fas);
 
-const background = require('./data/images/Depositphotos_2.png');
+const background = require('./data/images/Depositphotos_3.png');
+const background2 = require('./data/images/Depositphotos_2.png');
 const logotype = require('./data/images/logotype.png');
 
 const handleScroll = () => {
   const scrollBlock = document.getElementById('scrollBlock');
   let scrolltop = scrollBlock.getElementsByTagName('div')[0].scrollTop;
 
-  if(scrolltop >= 800 && scrolltop < (scrollBlock.getElementsByTagName('div')[0].scrollHeight - document.getElementById('scrollBlock').offsetHeight - 500) ){
+  if(scrolltop >= 800 ){
     document.getElementById('topMenu').className = 'topMenu scrollMenu';
     document.getElementById('toTopButton').className = 'toTopButton showTopBtn';
     document.getElementById('mobileMenuBtn').className = 'mobileMenuBtn blackBack';
     document.getElementById('navbar').className = 'navbar navbarEnabled';
   }else{
     document.getElementById('topMenu').className = 'topMenu';
-    document.getElementById('toTopButton').className = 'toTopButton';
     document.getElementById('mobileMenuBtn').className = 'mobileMenuBtn';
     document.getElementById('navbar').className = 'navbar';
+  }
+
+  if(scrolltop >= 800 && scrolltop > (scrollBlock.getElementsByTagName('div')[0].scrollHeight - document.getElementById('scrollBlock').offsetHeight - 500) ){
+      document.getElementById('toTopButton').className = 'toTopButton';
   }
 };
 
@@ -60,7 +64,7 @@ class MainContent extends React.Component {
   }
   render(){
     return <div className="contentData">
-      <Header background={background} logotype={logotype}/>
+      <Header backgroundData={background} logotype={logotype}/>
       <About/>
       <StatisticBlock/>
       <Services/>
@@ -75,14 +79,6 @@ class MainContent extends React.Component {
 }
 
 class CabinetContent extends React.Component {
-  componentDidMount () { //ставим фокус в input
-    setTimeout(() => {
-      document.getElementById('Preloader').className = 'Preloader fadeout';
-      setTimeout(() => {
-        document.getElementById('Preloader').style.display = 'none'
-      }, 300);
-    },2500);
-  }
   render(){
     return <div className="contentData">
       <Cabinet/>

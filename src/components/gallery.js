@@ -96,7 +96,7 @@ class GalleryBlock extends React.Component {
     });
   }
   render() {
-    return <div className="datablock galleryBlock">
+    return <div className="datablock galleryBlock" id="GALLERY">
       <div className={(this.state.openimagesrc === null)?"imageModal hiden":"imageModal"} id="imageModal">
         <div className="imageModalBlock">
           <div className="closeimageModal" onClick={this.closephoto}>

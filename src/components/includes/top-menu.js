@@ -5,6 +5,11 @@ class TopMenu extends React.Component {
   toCloseMobileMenu(){
       document.getElementById('topMenu').className = 'topMenu';
   }
+  toScrollBlock(e){
+    let toTopposition = document.getElementById(e.target.getAttribute('get-data')).offsetTop;
+    console.log(toTopposition)
+    document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: toTopposition - 100, behavior: 'smooth'});
+  }
   render() {
     return <div className="topMenu" id="topMenu">
       <div className="menuLeft">
@@ -14,12 +19,12 @@ class TopMenu extends React.Component {
       </div>
       <div className="content1024">
         <div className="menuBtnTopBlock">
-          <div className="menuButton">О нас</div>
-          <div className="menuButton">Услуги</div>
-          <div className="menuButton">Персонал</div>
-          <div className="menuButton">Галерея</div>
-          <div className="menuButton">Отзывы</div>
-          <div className="menuButton">Связь</div>
+          <div className="menuButton" get-data="ABOUT" onClick={this.toScrollBlock.bind(this)}>О нас</div>
+          <div className="menuButton" get-data="PRICE" onClick={this.toScrollBlock.bind(this)}>Услуги</div>
+          <div className="menuButton" get-data="STAFF" onClick={this.toScrollBlock.bind(this)}>Персонал</div>
+          <div className="menuButton" get-data="GALLERY" onClick={this.toScrollBlock.bind(this)}>Галерея</div>
+          <div className="menuButton" get-data="REVIEWS" onClick={this.toScrollBlock.bind(this)}>Отзывы</div>
+          <div className="menuButton" get-data="FEEDBACK" onClick={this.toScrollBlock.bind(this)}>Связь</div>
           <div className="searchBlock">
             <FontAwesomeIcon icon={['fas', 'search']} />
           </div>

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class StaffBlock extends React.Component {
   render() {
-    return <div className="datablock staffBlock">
+    return <div className="datablock staffBlock" id="STAFF">
       <div className="content1024">
         <Fade top>
         <div className="blockBigTitle" style={{color: 'black'}}>
