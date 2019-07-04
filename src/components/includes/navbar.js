@@ -9,6 +9,7 @@ class NavBar extends React.Component {
   }
   render() {
     return <div className="navbar" id="navbar">
+      <img src={this.props.logotype} alt="" className="mobileMenuLogo"/>
       <div className="mobileMenuBtn" id="mobileMenuBtn" onClick={this.toOpenMobileMenu.bind(this)}>
         <div className="mobBtnLineDef"></div>
         <div className="mobBtnLineDef"></div>

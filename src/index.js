@@ -52,7 +52,7 @@ const handleScroll = () => {
     document.getElementById('navbar').className = 'navbar';
   }
 
-  if(scrolltop >= 800 && scrolltop > (scrollBlock.getElementsByTagName('div')[0].scrollHeight - document.getElementById('scrollBlock').offsetHeight - 500) ){
+  if(scrolltop < 800 || scrolltop > (scrollBlock.getElementsByTagName('div')[0].scrollHeight - document.getElementById('scrollBlock').offsetHeight - 500) ){
       document.getElementById('toTopButton').className = 'toTopButton';
   }
 };
@@ -109,7 +109,7 @@ ReactDOM.render(
   <Scrollbars onScroll={handleScroll} style={{ height: "calc(100%)" }} renderThumbVertical={props => <div className="thumb-vertical"/>} id="scrollBlock" >
     <Preloader/>
     <TopMenu/>
-    <NavBar/>
+    <NavBar logotype={logotype}/>
     <Router>
       <div className="routerContent">
         <Route path="/" exact component={MainContent}/>

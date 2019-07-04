@@ -192,6 +192,10 @@ a{
   text-transform: lowercase;
 }
 
+.navbar .mobileMenuLogo{
+  display: none;
+}
+
 /** Menu **/
 .topMenu{
   position: absolute;

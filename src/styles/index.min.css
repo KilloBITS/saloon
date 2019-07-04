@@ -1,4 +1,11 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1140px) {
+  .menuButton {
+    margin: 5px 6px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 880px) {
   .slider .each-slide{
     background-position: calc(100% + 50px);
   }
@@ -6,6 +13,11 @@
     display: block;
     z-index: 10;
   }
+
+  .mobileMenuLogo{
+    display: block;
+  }
+
   .mobileMenuBtn{
     display: block;
     position: absolute;
@@ -17,7 +29,10 @@
     cursor: pointer;
   }
   .snimationSVG{
-    bottom: -80px;
+    /* bottom: -80px; */
+  }
+  .tm_pb_module{
+    text-align: center;
   }
   .formLineData label{
     right: 20px;
@@ -25,9 +40,10 @@
   .mobBtnLineDef{
     width: 100%;
     height: 5px;
-    background-color: white;
+    background-color: #1c1c1c;
     margin-bottom: 10px;
     transition: 0.3s;
+    border-radius: 15px;
   }
 
   .mobileCloseButton{
@@ -42,7 +58,7 @@
   }
 
   .mobileCloseButton .mobBtnLineDef{
-    background-color: black;
+    background-color: #616161;
     position: absolute;
   }
   .videoBlock{
@@ -68,12 +84,24 @@
     top: 0;
     z-index: 10;
     background-color: #ffffff;
-    border-bottom: 1px solid #f64b60;
+    border-bottom: 1px solid #fc72724f;
     box-shadow: 0px 1px 3px 1px pink;
     transition: 0.3s;
+    background-image: linear-gradient(0deg, #ffffff, 1px, #ffffff);
   }
+
+  .navbar .mobileMenuLogo{
+    display: block;
+    max-width: 100px;
+    max-height: 45px;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translate(-50%, 0);
+  }
+
   .mobileMenuBtn.blackBack .mobBtnLineDef{
-    background-color: black;
+    background-color: #616161;
   }
   .headerInfo{
     display: none;
@@ -291,7 +319,8 @@
     width: calc(100% - 30px);
     height: 30px;
     border-radius: 3px;
-    border: 1px solid #f64a5f;
+    border: 0;
+    border-bottom: 1px solid #f64a5f;
     padding-left: 10px;
     margin: auto;
     display: grid;
@@ -301,7 +330,8 @@
     width: calc(100% - 34px);
     height: 100px;
     border-radius: 3px;
-    border: 1px solid #f64a5f;
+    border: 0;
+    border-bottom: 1px solid #f64a5f;
     padding-left: 10px;
     resize: none;
     display: grid;
@@ -317,9 +347,15 @@
   .formLineData .clearMessage, .formLineData .sendMessage {
     margin: 0;
     display: inline-block;
-    width: 50%;
+    width: calc(50% - 5px);
     padding: 10px 0;
     text-align: center;
+  }
+  .formLineData .sendMessage{
+    margin-right: 5px;
+  }
+  .formLineData .clearMessage{
+    margin-left: 5px;
   }
   .staffTable{
     display: block;
