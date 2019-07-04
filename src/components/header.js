@@ -162,8 +162,9 @@ class Slider extends React.Component {
 class HeaderBlock extends React.Component {
   constructor(props){
     super(props)
+
     this.state = {
-      currentLocation: window.location.origin.toString()
+      currentLocation: (window.location.port !== '3000')?window.location.origin.toString():window.location.origin.split('3000')[0]+'5001'
     }
   }
   render() {
