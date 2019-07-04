@@ -7,7 +7,6 @@ class TopMenu extends React.Component {
   }
   toScrollBlock(e){
     let toTopposition = document.getElementById(e.target.getAttribute('get-data')).offsetTop;
-    console.log(toTopposition)
     document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: toTopposition - 100, behavior: 'smooth'});
   }
   render() {

@@ -4,6 +4,10 @@ class Footer extends React.Component {
   toTopThisScroll(){
     document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: 0, behavior: 'smooth'});
   }
+  toScrollBlock(e){
+    let toTopposition = document.getElementById(e.target.getAttribute('get-data')).offsetTop;
+    document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: toTopposition - 100, behavior: 'smooth'});
+  }
   render() {
     return <div className="datablock footerBlock">
       <div className="toTopFooter">
@@ -13,12 +17,12 @@ class Footer extends React.Component {
       </div>
       <div className="content1000">
         <div className="footerblockdata dataLeft">
-          <div className="footerNavMenuBtn">О нас</div>
-          <div className="footerNavMenuBtn">Услуги</div>
-          <div className="footerNavMenuBtn">Персонал</div>
-          <div className="footerNavMenuBtn">Галерея</div>
-          <div className="footerNavMenuBtn">Отзывы</div>
-          <div className="footerNavMenuBtn">Связь</div>
+          <div className="footerNavMenuBtn" get-data="ABOUT" onClick={this.toScrollBlock.bind(this)}>О нас</div>
+          <div className="footerNavMenuBtn" get-data="PRICE" onClick={this.toScrollBlock.bind(this)}>Услуги</div>
+          <div className="footerNavMenuBtn" get-data="STAFF" onClick={this.toScrollBlock.bind(this)}>Персонал</div>
+          <div className="footerNavMenuBtn" get-data="GALLERY" onClick={this.toScrollBlock.bind(this)}>Галерея</div>
+          <div className="footerNavMenuBtn" get-data="REVIEWS" onClick={this.toScrollBlock.bind(this)}>Отзывы</div>
+          <div className="footerNavMenuBtn" get-data="FEEDBACK" onClick={this.toScrollBlock.bind(this)}>Связь</div>
         </div>
         <div className="footerblockdata dataCenter">
           <div className="footerLogotype">

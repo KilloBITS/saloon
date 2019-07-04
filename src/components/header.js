@@ -1,7 +1,9 @@
 import React from 'react';
+import Lottie from 'react-lottie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const background2 = require('../data/images/Depositphotos_3.png');
+const videoBack = require('../data/video/butterfly-short.mp4')
 class Slider extends React.Component {
     constructor(props) {
         super(props);
@@ -79,6 +81,9 @@ class Slider extends React.Component {
     renderSlides() {
         return this.state.slides.map( (item, index) => (
           <div className='each-slide' key={ index } style={{ backgroundImage: item.eachSlide }}>
+            <div className="videoBlock">
+              <video autoPlay loop muted src={videoBack}/>
+            </div>
             <div className="bigLogotype">
               <img src={'https://i.pinimg.com/originals/05/5c/eb/055cebba54fcd09aa759ebb9c964ec53.png'} alt=""/>
               <div className="headerInfoText">
@@ -160,9 +165,25 @@ class Slider extends React.Component {
 
 class HeaderBlock extends React.Component {
   render() {
+    let headergolfthrid={
+
+        renderer:'svg',
+        loop:!0,
+        prerender:!0,
+        autoplay:!0,
+        rendererSettings:{
+            progressiveLoad:!1,
+            preserveAspectRatio:'xMaxYMax slice'
+        },
+        path:'http://localhost:5001/header_vast.json'
+    };
+
     return <div className="datablock headerBlock">
       <div className="headerBackground">
         <Slider/>
+        <div className="snimationSVG" id="animationSVG">
+          <Lottie options={headergolfthrid}/>
+        </div>
       </div>
 
       <div className="bottomBlock">
