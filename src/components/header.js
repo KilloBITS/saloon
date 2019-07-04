@@ -113,7 +113,6 @@ class Slider extends React.Component {
         return playStop;
     }
     renderArrows() {
-        console.log(this.state.slides.length)
         if(this.state.slides.length > 1){
           return (
               <div className="arrowsPrewAnfNext">

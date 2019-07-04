@@ -60,6 +60,7 @@ a{
   background-color: white;
   z-index: 9999999;
   transition: 0.3s;
+  background-image: url(https://www.transparenttextures.com/patterns/xv.png)
 }
 
 .Preloader .loadingAnimation svg, .Preloader .loadingAnimation div {
@@ -72,17 +73,17 @@ a{
 }
 
 .Preloader .loadingAnimation .pet1 {
-  fill: rgba(219,219,219,.75);
+  fill: rgba(255, 86, 86, 0.75);
   animation: rotate 1s linear infinite;
 }
 
 .Preloader .loadingAnimation .pet2 {
-  fill: rgba(173,235,241,.75);
+  fill: rgba(157, 73, 73, 0.75);
   animation: rotate 2s linear infinite;
 }
 
 .Preloader .loadingAnimation .pet3 {
-  fill: rgba(121,190,196,.75);
+  fill: rgba(217, 64, 64, 0.75);
   animation: rotate 1s linear infinite reverse;
 }
 
@@ -1111,6 +1112,7 @@ a{
   border-radius: 3px;
   border: 1px solid #f64a5f;
   padding-left: 10px;
+  border-bottom-width: 4px;
 }
 
 .formLineData textarea{
@@ -1119,6 +1121,7 @@ a{
   border-radius: 3px;
   border: 1px solid #f64a5f;
   padding-left: 10px;
+  border-bottom-width: 4px; 
   resize: none;
 }
 .formLineData.buttonLine{
@@ -1162,7 +1165,7 @@ input:focus {
     width: 100%;
     z-index: 1;
     top: -5px;
-    filter: invert(1) contrast(1.5);
+    filter: invert(1) contrast(1.26);
 }
 
 #map {

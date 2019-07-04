@@ -30,7 +30,6 @@ import Cabinet from './components/cabinet/cabinet.js'
 library.add(fab, faCheckSquare, faCoffee, fas);
 
 const background = require('./data/images/Depositphotos_3.png');
-const background2 = require('./data/images/Depositphotos_2.png');
 const logotype = require('./data/images/logotype.png');
 
 const handleScroll = () => {

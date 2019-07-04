@@ -41,7 +41,11 @@
     background-color: black;
     position: absolute;
   }
-
+  .videoBlock video {
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%,0);
+  }
   .mobileCloseButton .mobBtnLineDef:nth-child(1){
     transform: rotate(45deg);
     top: 15px;
