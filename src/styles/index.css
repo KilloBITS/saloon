@@ -322,7 +322,7 @@ a{
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(252, 114, 114, 0.47);
+  background-color: rgba(252, 114, 114, 0.1);
   z-index: 1;
   /* background-image: url(https://www.transparenttextures.com/patterns/batthern.png); */
   background-image: url(https://www.transparenttextures.com/patterns/xv.png);
@@ -1151,19 +1151,23 @@ a{
 .formLineData input[type=text]{
   width: calc(100% - 10px);
   height: 30px;
+  border: 0;
   border-radius: 3px;
   border: 1px solid #f64a5f;
   padding-left: 10px;
   border-bottom-width: 4px;
+  background-color: #fcfcfc;
 }
 
 .formLineData textarea{
   width: calc(100% - 13px);
   height: 100px;
+  border: 0;
   border-radius: 3px;
   border: 1px solid #f64a5f;
   padding-left: 10px;
   border-bottom-width: 4px;
+  background-color: #fcfcfc;
   resize: none;
 }
 .formLineData.buttonLine{
