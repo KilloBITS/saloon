@@ -195,6 +195,7 @@ a{
   max-width: 100%;
   color: white;
   transition: 0.3s;
+  border-bottom: 1px solid white;
 }
 
 .topMenu .content1024{
