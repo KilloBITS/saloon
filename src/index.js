@@ -9,9 +9,13 @@ import { faCheckSquare, faCoffee , fas} from '@fortawesome/free-solid-svg-icons'
 import './styles/index.css'
 import './styles/index.min.css'
 
+//общие компоненты
 import Preloader from './components/preloader.js';
 import TopMenu from './components/includes/top-menu.js';
 import NavBar from './components/includes/navbar.js';
+import MakeAnAppointment from './components/includes/makeanappointment.js';
+
+//статические компоненты
 import Header from './components/header.js';
 import About from './components/about.js';
 import StatisticBlock from './components/statistic.js';
@@ -30,7 +34,8 @@ import Cabinet from './components/cabinet/cabinet.js'
 library.add(fab, faCheckSquare, faCoffee, fas);
 
 const background = require('./data/images/Depositphotos_3.png');
-const logotype = require('./data/images/logotype.png');
+// const logotype = require('./data/images/logotype.png');
+const logotype = require( './data/images/logo.svg');
 
 const handleScroll = () => {
   const scrollBlock = document.getElementById('scrollBlock');
@@ -53,19 +58,34 @@ const handleScroll = () => {
 };
 
 class MainContent extends React.Component {
-  componentDidMount () { //ставим фокус в input
-    setTimeout(() => {
-      document.getElementById('Preloader').className = 'Preloader fadeout';
-      setTimeout(() => {
-        document.getElementById('Preloader').style.display = 'none'
-      }, 300);
-    },2500);
+  constructor(props){
+    super(props)
+    this.state = {
+      makeAnAppointment: false
+    }
+
+    this.openMaceModalMethod = this.openMakeModal.bind(this);
+    this.closeMaceModalMethod = this.closeMakeModal.bind(this);
   }
+
+  openMakeModal(){
+    this.setState({
+      makeAnAppointment: true
+    });
+  }
+
+  closeMakeModal(){
+    this.setState({
+      makeAnAppointment: false
+    });
+  }
+
   render(){
     return <div className="contentData">
+      <MakeAnAppointment opened={this.state.makeAnAppointment} closedModalMethods={this.closeMaceModalMethod}/>
       <Header backgroundData={background} logotype={logotype}/>
       <About/>
-      <StatisticBlock/>
+      <StatisticBlock openedModalMethods={this.openMaceModalMethod}/>
       <Services/>
       <StaffBlock/>
       <Newsletter/>
@@ -96,7 +116,7 @@ ReactDOM.render(
         <Route path="/profile" exact component={CabinetContent}/>
       </div>
     </Router>
-    <FooterBlock/>
+    <FooterBlock logotype={logotype}/>
   </Scrollbars>,
   document.getElementById('root')
 );

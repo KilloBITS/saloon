@@ -2,7 +2,7 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const background2 = require('../data/images/Depositphotos_3.png');
+const background2 = require('../data/images/87e37abb-0ed8-4350-8e79-14a29b319296.jpg');
 const videoBack = require('../data/video/butterfly-short.mp4')
 class Slider extends React.Component {
     constructor(props) {
@@ -81,11 +81,8 @@ class Slider extends React.Component {
     renderSlides() {
         return this.state.slides.map( (item, index) => (
           <div className='each-slide' key={ index } style={{ backgroundImage: item.eachSlide }}>
-            <div className="videoBlock">
-              <video autoPlay loop muted src={videoBack}/>
-            </div>
-            <div className="bigLogotype">
-              <img src={'https://i.pinimg.com/originals/05/5c/eb/055cebba54fcd09aa759ebb9c964ec53.png'} alt=""/>
+            <div className="bigLogotype" id="bigLogotype">
+              <img src={this.props.logo} alt=""/>
               <div className="headerInfoText">
                 «Настоящее волшебство» - вот как описывают клиенты работу профессионала.
                 <br/>
@@ -142,6 +139,7 @@ class Slider extends React.Component {
 
     }
     render(){
+
         return (
             <div>
                 <div className='slider'>
@@ -165,7 +163,6 @@ class Slider extends React.Component {
 class HeaderBlock extends React.Component {
   render() {
     let headergolfthrid={
-
         renderer:'svg',
         loop:!0,
         prerender:!0,
@@ -179,7 +176,7 @@ class HeaderBlock extends React.Component {
 
     return <div className="datablock headerBlock">
       <div className="headerBackground">
-        <Slider/>
+        <Slider logo={this.props.logotype}/>
         <div className="snimationSVG" id="animationSVG">
           <Lottie options={headergolfthrid}/>
         </div>

@@ -6,7 +6,7 @@ class ServicesBlock extends React.Component {
   render() {
     return <div className="datablock servicesBlock" id="PRICE">
       <div className="content1024">
-        <Fade top>
+        <Fade>
         <div className="blockBigTitle" style={{color: 'black'}}>
           <h2>pricing</h2>
           УСЛУГИ
@@ -15,7 +15,7 @@ class ServicesBlock extends React.Component {
       </div>
       <div className="content1024">
         <div className="servicesTable">
-          <Fade left>
+          <Fade>
           <div className="serviceBtn prevService"><FontAwesomeIcon icon={['fas', 'chevron-left']} /></div>
           </Fade>
           <Fade>
@@ -81,7 +81,7 @@ class ServicesBlock extends React.Component {
             <div className="servicesButton">Детальнее</div>
           </div>
           </Fade>
-          <Fade right>
+          <Fade>
           <div className="serviceBtn nextService"><FontAwesomeIcon icon={['fas', 'chevron-right']} /></div>
           </Fade>
         </div>

@@ -7,7 +7,7 @@ class StaffBlock extends React.Component {
   render() {
     return <div className="datablock staffBlock" id="STAFF">
       <div className="content1024">
-        <Fade top>
+        <Fade>
         <div className="blockBigTitle" style={{color: 'black'}}>
           <h2>staff</h2>
           Персонал

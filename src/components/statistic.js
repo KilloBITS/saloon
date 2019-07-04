@@ -68,7 +68,7 @@ class StatisticBlock extends React.Component {
               У нас вы можете сами выбрать время которое вам удобно,
               <br/>
               а так же выбрать специалиста который будет вас обслуживать
-              <div className="servicesButton">Записатся на прием</div>
+              <div className="servicesButton" onClick={this.props.openedModalMethods}>Записатся на прием</div>
             </div>
           </div>
           </Fade>

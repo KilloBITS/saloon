@@ -60,9 +60,20 @@ a{
   background-color: white;
   z-index: 9999999;
   transition: 0.3s;
-  background-image: url(https://www.transparenttextures.com/patterns/xv.png)
 }
 
+.Preloader div{
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 22px);
+  transform: translate(-50%,-50%);
+  width: 408px;
+}
+
+.Preloader.fadeout{
+  opacity: 0;
+}
+/*
 .Preloader .loadingAnimation svg, .Preloader .loadingAnimation div {
   margin-left: -50px;
   margin-top: -50px;
@@ -87,15 +98,11 @@ a{
   animation: rotate 1s linear infinite reverse;
 }
 
-.Preloader.fadeout{
-  opacity: 0;
-}
-
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 /* #scrollBlock div:nth-child(1){
   overflow-x: hidden;
@@ -232,7 +239,7 @@ a{
 }
 
 .menuButton:hover{
-  color: #e33271;
+  color: #f64b60;
 }
 
 .searchBlock{
@@ -286,6 +293,11 @@ a{
 
 .menuLeft .socials_mini_icon a{
   color: white;
+  transition: 0.3s;
+}
+
+.menuLeft .socials_mini_icon a:hover{
+  color: #f64b60;
 }
 
 .topMenu.scrollMenu{
@@ -301,15 +313,16 @@ a{
 .headerBlock{
 
 }
-
+.Preloader div{
+  max-width: calc(100% - 50px);
+}
 .backgroundFilter{
-  /* display: none; */
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(252, 252, 252, 0.14);
+  background-color: rgba(252, 114, 114, 0.47);
   z-index: 1;
   /* background-image: url(https://www.transparenttextures.com/patterns/batthern.png); */
   background-image: url(https://www.transparenttextures.com/patterns/xv.png);
@@ -327,7 +340,7 @@ a{
   max-width: calc(100% - 50px);
 }
 .bigLogotype img{
-
+  width: 408px;
 }
 .headerBackground{
   position: relative;
@@ -771,11 +784,37 @@ a{
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s;
+  overflow: hidden;
+  position: relative;
 }
+
+.servicesButton::before,.servicesButton::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  top: 50%;
+  transform: translate(0px, -50%);
+  transition: 0.3s;
+}
+
+.servicesButton::before{
+  left: 8px;
+}
+
+.servicesButton::after{
+  right: 8px;
+}
+/*width: calc(50% - 62px);*/
 
 .servicesButton:hover{
   background-color: #c53244;
   box-shadow: 2px 2px 0px 0px #891826;
+}
+
+.servicesButton:hover::before,.servicesButton:hover.servicesButton::after{
+  width: calc(50% - 62px);
 }
 
 /** Персонал **/
@@ -787,6 +826,7 @@ a{
 .staffTable{
   width: fit-content;
   margin: auto;
+  text-align: center;
 }
 
 .staffContainer{
@@ -1312,14 +1352,82 @@ input:focus {
   max-width: 100%;
 }
 
+/** Записатся на прием **/
+.makeanappointment{
+  position: fixed;
+  z-index: 25;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
-/* <div className="headerInfo">
-  <div className="headerInfoTitle" data-descr="Салон красоты">
-    Салон красоты
-  </div>
-  <div className="headerInfoText">
-    «Настоящее волшебство» - вот как описывают клиенты работу профессионала.
-    <br/>
-    Удивительно, как изменения внешности способны повлиять на жизнь человека!
-  </div>
-</div> */
+.makeanappointment.hiden{
+  display: none;
+}
+
+.makeanappointmentContent{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  text-transform: uppercase;
+  font-family: DefaultText;
+  min-width: 500px;
+}
+
+.makeanappointmentHeader{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  padding: 10px 0;
+  background-color: #e53c50;
+  color: white;
+}
+
+.makeanappointmentHeaderTitle{
+
+}
+
+.makeanappointmentHeaderClose{
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  position: absolute;
+  right: 0px;
+  top: -30px;
+  color: silver;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.makeanappointmentHeaderClose:hover{
+  opacity: 1;
+}
+
+.makeanappointmentData{
+    padding: 0 10px 10px 10px;
+}
+
+.makeanappointmentInput{
+  width: calc(100% - 5px);
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid silver;
+}
+
+.makeanappointmentData input[type=button]{
+  width: calc(100% - 5px);
+  height: auto;
+  border-radius: 150px;
+  border: 1px solid silver;
+}
+
+.makeanappointmentDataLine span{
+  font-size: 14px;
+}

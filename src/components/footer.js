@@ -26,7 +26,7 @@ class Footer extends React.Component {
         </div>
         <div className="footerblockdata dataCenter">
           <div className="footerLogotype">
-            <img src={'https://i.pinimg.com/originals/05/5c/eb/055cebba54fcd09aa759ebb9c964ec53.png'} alt=""/>
+            <img src={this.props.logotype} alt=""/>
           </div>
           <div className="footerCopiright">
             "Название" (с) 2019, Все права защищены.

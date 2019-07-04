@@ -5,7 +5,7 @@ class FeedBack extends React.Component {
   render() {
     return <div className="datablock feedBackBlock" id="FEEDBACK">
       <div className="content1024">
-        <Fade top>
+        <Fade>
         <div className="blockBigTitle" style={{color: 'black'}}>
           <h2>feedback</h2>
           Контакты
@@ -14,7 +14,7 @@ class FeedBack extends React.Component {
       </div>
       <div className="content1024">
         <div className="feedBackData">
-          <Fade left>
+          <Fade>
           <div className="block40feed">
             <div className="contactLine">
               <div className="contactLineTitle">Адесс</div>
@@ -34,7 +34,7 @@ class FeedBack extends React.Component {
             </div>
           </div>
           </Fade>
-          <Fade right>
+          <Fade>
           <div className="block60feed">
             <form>
               <div className="formLineData">
