@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const multipleRowSlidesLayoutMobile = () => {
   const params = {
-    slidesPerView: 3,
+    slidesPerView: (window.innerWidth > 800)?3:1,
     spaceBetween: 30,
     navigation: {
       nextEl: '.serviceBtn.nextService',
