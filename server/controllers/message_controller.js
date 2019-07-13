@@ -28,7 +28,7 @@ let postMessage = (req, res, next) => {
                 "["+data.text+"]";
   let mailOptions = {
       from: "MyResume.kaleniuk@gmail.com", // sender address
-      to: "mr.kalinuk@gmail.com", // list of receivers
+      to: "mr.kalinuk@gmail.com", // list of receivers 
       subject: "Сообщение с сайта резюме ("+ data.email +")", // Subject line
 			html: HTMLTemplate('Web Developer - Kaleniuk Ihor', today, data.email, data.firstName+' '+data.lastName, data.text),
       text: message, // plain text body
