@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const makeanappointmentModel = require('../../data/images/maquiagem.png');
 class MakeAnAppointment extends React.Component {
   constructor() {
     super();
@@ -9,13 +10,10 @@ class MakeAnAppointment extends React.Component {
     };
   }
 
-  handleChange = (moment) => {
-
-  }
-
   render() {
     return <div className={(this.props.opened)?"makeanappointment":"makeanappointment hiden"} id="makeanappointment">
       <div className="makeanappointmentContent">
+        <img className="makeanappointmentModel" src={makeanappointmentModel}/>
         <div className="makeanappointmentHeader">
           <div className="makeanappointmentHeaderTitle">Записатся на прием</div>
           <div className="makeanappointmentHeaderClose" onClick={this.props.closedModalMethods}><FontAwesomeIcon icon={['fas', 'times']} /></div>

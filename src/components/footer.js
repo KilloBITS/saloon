@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 class Footer extends React.Component {
   toTopThisScroll(){
     document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: 0, behavior: 'smooth'});
@@ -26,7 +27,7 @@ class Footer extends React.Component {
         </div>
         <div className="footerblockdata dataCenter">
           <div className="footerLogotype">
-            <img src={this.props.logotype} alt=""/>
+            <img src={this.props.logo} alt=""/>
           </div>
           <div className="footerCopiright">
             "Название" (с) 2019, Все права защищены.

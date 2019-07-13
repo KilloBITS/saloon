@@ -2,6 +2,47 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 class FeedBack extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      name: '',
+      number: '',
+      email: '',
+      text: ''
+    }
+  }
+  clearArea(){
+    this.setState({
+      name: '',
+      number: '',
+      email: '',
+      text: ''
+    })
+  }
+  updateMessageDataName(event){
+    var name = event.target.value;
+    this.setState({
+        name: name
+    });
+  }
+  updateMessageDataNumber(event){
+    var number = event.target.value;
+    this.setState({
+        number: number
+    });
+  }
+  updateMessageDataEmail(event){
+    var email = event.target.value;
+    this.setState({
+        email: email
+    });
+  }
+  updateMessageDataText(event){
+    var text = event.target.value;
+    this.setState({
+        text: text
+    });
+  }
   render() {
     return <div className="datablock feedBackBlock" id="FEEDBACK">
       <div className="content1024">
@@ -39,27 +80,27 @@ class FeedBack extends React.Component {
             <form>
               <div className="formLineData">
                 <label>Имя</label>
-                <input type="text" className="formTextLine"/>
+                <input type="text" className="formTextLine" value={this.state.name} onChange={this.updateMessageDataName.bind(this)}/>
               </div>
 
               <div className="formLineData">
                 <label>Номер телефона</label>
-                <input type="text" className="formTextLine"/>
+                <input type="text" className="formTextLine" value={this.state.number} onChange={this.updateMessageDataNumber.bind(this)}/>
               </div>
 
               <div className="formLineData">
                 <label>Електронная почта</label>
-                <input type="text" className="formTextLine"/>
+                <input type="text" className="formTextLine" value={this.state.email} onChange={this.updateMessageDataEmail.bind(this)}/>
               </div>
 
               <div className="formLineData">
                 <label>Сообщение</label>
-                <textarea className="formTextLine"></textarea>
+                <textarea className="formTextLine" value={this.state.text} onChange={this.updateMessageDataText.bind(this)}></textarea>
               </div>
 
               <div className="formLineData buttonLine">
                 <div className="servicesButton sendMessage">Отправить</div>
-                <div className="servicesButton clearMessage">Очистить</div>
+                <div className="servicesButton clearMessage" onClick={this.clearArea.bind(this)}>Очистить</div>
               </div>
             </form>
           </div>

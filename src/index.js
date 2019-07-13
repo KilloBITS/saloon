@@ -27,7 +27,7 @@ import Newsletter from './components/newsletter.js'
 import FeedBack from './components/feedback.js'
 import MapBlock from './components/map.js'
 import FooterBlock from './components/footer.js'
-
+import SignInUp from './components/signInUp.js'
 //Кабинет
 import Cabinet from './components/cabinet/cabinet.js'
 
@@ -35,6 +35,7 @@ library.add(fab, faCheckSquare, faCoffee, fas);
 
 const background = require('./data/images/Depositphotos_3.png');
 const logotype = require( './data/images/logo.svg');
+
 
 const handleScroll = () => {
   const scrollBlock = document.getElementById('scrollBlock');
@@ -78,11 +79,10 @@ class MainContent extends React.Component {
       makeAnAppointment: false
     });
   }
-
   render(){
     return <div className="contentData">
       <MakeAnAppointment opened={this.state.makeAnAppointment} closedModalMethods={this.closeMaceModalMethod}/>
-      <Header backgroundData={background} logotype={logotype}/>
+      <Header backgroundData={background} logo={logotype}/>
       <About/>
       <StatisticBlock openedModalMethods={this.openMaceModalMethod}/>
       <Services/>
@@ -104,18 +104,50 @@ class CabinetContent extends React.Component {
   }
 }
 
+class MainComponents extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      modalOpen: false,
+      modalType: null
+    }
+  }
+
+  modalMethods(){
+    this.setState({
+      modalOpen: (!this.state.modalOpen)
+    });
+  }
+
+  setRegister(){
+    this.setState({
+      modalType: 0
+    });
+  }
+
+  setAuth(){
+    this.setState({
+      modalType: 1
+    });
+  }
+  render(){
+    return <Scrollbars onScroll={handleScroll} style={{ height: "calc(100%)" }} renderThumbVertical={props => <div className="thumb-vertical"/>} id="scrollBlock" >
+      <Preloader/>
+      <TopMenu modalMethods={this.modalMethods.bind(this)} setRegister={this.setRegister.bind(this)} setAuth={this.setAuth.bind(this)}/>
+      <NavBar logo={logotype}/>
+      <SignInUp modalOpen={this.state.modalOpen} modalType={this.state.modalType}/>
+      <Router>
+        <div className="routerContent">
+          <Route path="/" exact component={MainContent}/>
+          <Route path="/profile" exact component={CabinetContent}/>
+        </div>
+      </Router>
+      <FooterBlock logo={logotype}/>
+    </Scrollbars>
+  }
+}
+
 ReactDOM.render(
-  <Scrollbars onScroll={handleScroll} style={{ height: "calc(100%)" }} renderThumbVertical={props => <div className="thumb-vertical"/>} id="scrollBlock" >
-    <Preloader/>
-    <TopMenu/>
-    <NavBar logotype={logotype}/>
-    <Router>
-      <div className="routerContent">
-        <Route path="/" exact component={MainContent}/>
-        <Route path="/profile" exact component={CabinetContent}/>
-      </div>
-    </Router>
-    <FooterBlock logotype={logotype}/>
-  </Scrollbars>,
+  <MainComponents/>,
   document.getElementById('root')
 );

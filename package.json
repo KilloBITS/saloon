@@ -16,6 +16,7 @@
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.6",
     "react-grid-gallery": "^0.5.5",
+    "react-id-swiper": "^2.3.1",
     "react-leaflet": "^2.4.0",
     "react-lottie": "^1.2.3",
     "react-native-image-layout": "^5.1.2",
@@ -23,6 +24,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-vivus": "0.0.2",
+    "swiper": "^4.5.0",
     "vivus": "^0.4.4"
   },
   "scripts": {

@@ -3,6 +3,8 @@ import Lottie from 'react-lottie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const background2 = require('../data/images/87e37abb-0ed8-4350-8e79-14a29b319296.jpg');
+
+const logotype = require( '../data/images/logo.svg');
 class Slider extends React.Component {
     constructor(props) {
         super(props);
@@ -81,7 +83,7 @@ class Slider extends React.Component {
         return this.state.slides.map( (item, index) => (
           <div className='each-slide' key={ index } style={{ backgroundImage: item.eachSlide }}>
             <div className="bigLogotype" id="bigLogotype">
-              <img src={this.props.logotype} alt=""/>
+              <img src={this.props.logo} alt=""/>
               <div className="headerInfoText">
                 «Настоящее волшебство» - вот как описывают клиенты работу профессионала.
                 <br/>
@@ -162,7 +164,6 @@ class Slider extends React.Component {
 class HeaderBlock extends React.Component {
   constructor(props){
     super(props)
-
     this.state = {
       currentLocation: (window.location.port !== '3000')?window.location.origin.toString():window.location.origin.split('3000')[0]+'5001'
     }
@@ -182,7 +183,7 @@ class HeaderBlock extends React.Component {
 
     return <div className="datablock headerBlock">
       <div className="headerBackground">
-        <Slider logo={this.props.logotype}/>
+        <Slider logo={this.props.logo}/>
         <div className="snimationSVG" id="animationSVG">
           <Lottie options={headergolfthrid}/>
         </div>

@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const bg = require('../data/images/bg2.png')
 class StatisticBlock extends React.Component {
+  toScrollComments(e){
+    let toTopposition = document.getElementById('REVIEWS').offsetTop;
+    document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: toTopposition, behavior: 'smooth'});
+  }
   render() {
     return <div className="datablock statisticBlock">
       <div className="content1024">
@@ -33,7 +37,6 @@ class StatisticBlock extends React.Component {
               Воскресенье
               <br/>
               <b>Выходной</b>
-              <div className="servicesButton">Детальнее</div>
             </div>
           </div>
           </Fade>
@@ -52,7 +55,7 @@ class StatisticBlock extends React.Component {
               <br/>
               <br/>
               Нам важно ваше мнение, и ваша внешность!
-              <div className="servicesButton">Посмотреть отзывы</div>
+              <div className="servicesButton" onClick={this.toScrollComments.bind(this)}>Посмотреть отзывы</div>
             </div>
           </div>
           </Fade>
